@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Designer’s Guide to Web Programming</title>
+	<meta name="author" content="GD with GD">
+	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education">
+	<meta name="description" content="A guided tour through the weird, wacky, wonderful (and sometimes intimidating) world of web programming, with a focus on the fun stuff.">
+	<meta property="og:url" content="https://webprogramming.gdwithgd.com/">
+	<meta name="og:title" property="og:title" content="The Designer’s Guide to Web Programming">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/assets/meta/opengraph.jpg">
+	<link rel="icon" type="png" href="/assets/meta/favicon.png">
+	<link rel="stylesheet" href="/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+</head>
+<body>
+	<nav class="nav" data-active="0">
+		<button class="nav-close" onclick="toggleNav();">Close menu</button>
+
+		<a href="#unit-1" class="nav-link-section" style="--primary: var(--pink);">UNIT 1: Typography</a>
+		<a href="#coding-resources" class="nav-link-subsection" style="--primary: var(--pink);">Coding Resources</a>
+		<a href="#html-tags-for-typography" class="nav-link-subsection" style="--primary: var(--pink);">HTML Tags for Typography</a>
+		<a href="#css-properties-for-typography" class="nav-link-subsection" style="--primary: var(--pink);">CSS Properties for Typography</a>
+
+		<div class="nav-divider"></div>
+
+		<a href="#unit-2" class="nav-link-section" style="--primary: var(--green);">UNIT 2: The Box Model</a>
+		<a href="#" class="nav-link-subsection" style="--primary: var(--green);">Coming soon!</a>
+
+		<div class="nav-divider"></div>
+		
+		<a href="#unit-3" class="nav-link-section" style="--primary: var(--blue);">Unit 3: Layout</a>
+		<a href="#" class="nav-link-subsection" style="--primary: var(--blue);">Coming soon!</a>
+
+		<div class="nav-divider"></div>
+		
+		<a href="#unit-4" class="nav-link-section" style="--primary: var(--yellow);">UNIT 4: Interaction</a>
+		<a href="#" class="nav-link-subsection" style="--primary: var(--yellow);">Coming soon!</a>
+
+		<div class="nav-divider"></div>
+		
+		<a href="#unit-5" class="nav-link-section" style="--primary: var(--purple);">UNIT 5: Loops</a>
+		<a href="#" class="nav-link-subsection" style="--primary: var(--purple);">Coming soon!</a>
+
+		<div class="nav-divider"></div>
+		
+		<a href="#unit-6" class="nav-link-section" style="--primary: var(--red);">UNIT 6: Data</a>
+		<a href="#" class="nav-link-subsection" style="--primary: var(--red);">Coming soon!</a>
+	</nav>
+	<button class="nav-toggle" onclick="toggleNav();">Menu</button>
+	<a href="https://gdwithgd.com/" target="_blank" class="nav-gd">GD with GD</a>
+
+	<header class="header">
+		<div class="header-intro">
+			<h1 class="header-title">
+				<span class="header-title-small">The Designer’s Guide to</span>
+				<span class="header-title-big">Web Programming</span>
+			</h1>
+			<p class="header-desc">
+				A guided tour through the weird, wacky, wonderful (and sometimes intimidating) world of web programming, with a focus on the fun stuff.
+			</p>
+			<span class="header-intro-outline" style="--primary: var(--red);"></span>
+			<span class="header-intro-outline" style="animation-delay: -.25s; --primary: var(--blue);"></span>
+			<span class="header-intro-outline" style="animation-delay: -.5s; --primary: var(--purple);"></span>
+			<span class="header-intro-outline" style="animation-delay: -.75s; --primary: var(--yellow);"></span>
+			<span class="header-intro-outline" style="animation-delay: -1s; --primary: var(--pink);"></span>
+			<span class="header-intro-outline" style="animation-delay: -1.25s; --primary: var(--green);"></span>
+		</div>
+
+		<div class="header-units">
+			<a href="#unit-1" class="header-units-link" style="--primary: var(--pink);">
+				<p class="header-units-link-number">Unit 1</p>
+				<p class="header-units-link-title">Typography</p>
+				<p class="header-units-link-desc">
+					Coming soon!
+				</p>
+			</a>
+			<a href="#unit-2" class="header-units-link" style="--primary: var(--green);">
+				<p class="header-units-link-number">Unit 2</p>
+				<p class="header-units-link-title">The Box Model</p>
+				<p class="header-units-link-desc">
+					Coming soon!
+				</p>
+			</a>
+			<a href="#unit-3" class="header-units-link" style="--primary: var(--blue);">
+				<p class="header-units-link-number">Unit 3</p>
+				<p class="header-units-link-title">Layout</p>
+				<p class="header-units-link-desc">
+					Coming soon!
+				</p>
+			</a>
+			<a href="#unit-4" class="header-units-link" style="--primary: var(--yellow);">
+				<p class="header-units-link-number">Unit 4</p>
+				<p class="header-units-link-title">Interaction</p>
+				<p class="header-units-link-desc">
+					Coming soon!
+				</p>
+			</a>
+			<a href="#unit-5" class="header-units-link" style="--primary: var(--purple);">
+				<p class="header-units-link-number">Unit 5</p>
+				<p class="header-units-link-title">Loops</p>
+				<p class="header-units-link-desc">
+					Coming soon!
+				</p>
+			</a>
+			<a href="#unit-6" class="header-units-link" style="--primary: var(--red);">
+				<p class="header-units-link-number">Unit 6</p>
+				<p class="header-units-link-title">Data</p>
+				<p class="header-units-link-desc">
+					Coming soon!
+				</p>
+			</a>
+		</div>
+	</header>
+
+	<main class="resources">
+		<section class="resources-section" style="--primary: var(--pink);" data-color="pink" id="unit-1">
+			<div class="resources-section-title">
+				<div class="resources-section-title-number">Unit 1</div>
+				<h2><a href="#unit-1">Typography</a></h2>
+				<p>
+					Coming soon!
+				</p>
+			</div>
+
+			<div class="resources-section-content">
+				<div class="resources-section-content-subsection" id="coding-resources">
+					<h3><a href="#coding-resources">Coding Resources</a></h3>
+					<div class="resources-section-content-subsection-content">
+						<div class="resources-section-content-subsection-content-info">
+							<p>
+								Coming soon!
+							</p>
+						</div>
+
+						<h4>Links</h4>
+						<div class="resources-section-content-subsection-content-links">
+							<a href="https://www.w3schools.com/" target="_blank">
+								<h5>W3Schools</h5>
+								<p>Beginner-focused documentation with lots of demos</p>
+							</a>
+							<a href="https://developer.mozilla.org/en-US/" target="_blank">
+								<h5>MDN</h5>
+								<p>Professional-focused documentation with all of the information you could ever need</p>
+							</a>
+							<a href="https://codepen.io/" target="_blank">
+								<h5>CodePen</h5>
+								<p>Code demos for all sorts of things</p>
+							</a>
+							<a href="https://css-tricks.com/" target="_blank">
+								<h5>CSS Tricks</h5>
+								<p>Tips, articles, and coding breakdowns</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="resources-section-content-subsection" id="html-tags-for-typography">
+					<h3><a href="#html-tags-for-typography">HTML Tags for Typography</a></h3>
+					<div class="resources-section-content-subsection-content">
+						<div class="resources-section-content-subsection-content-info">
+							<p>
+								Coming soon!
+							</p>
+						</div>
+
+						<h4>Links</h4>
+						<div class="resources-section-content-subsection-content-links">
+							<a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_paragraphs1" target="_blank">
+								<h5>&lt;p&gt;</h5>
+								<p>Paragraphs</p>
+							</a>
+							<a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_headers" target="_blank">
+								<h5>&lt;h1&gt;–&lt;h6&gt;</h5>
+								<p>Headings</p>
+							</a>
+							<a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_intro" target="_blank">
+								<h5>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h5>
+								<p>Unordered lists, ordered lists, and list items</p>
+							</a>
+							<a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_phrase_strong" target="_blank">
+								<h5>&lt;strong&gt;</h5>
+								<p>Bold (important) text</p>
+							</a>
+							<a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_phrase_em" target="_blank">
+								<h5>&lt;em&gt;</h5>
+								<p>Italic (emphasized) text</p>
+							</a>
+							<a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_link_test" target="_blank">
+								<h5>&lt;a href="_"&gt;</h5>
+								<p>Hyperlinks</p>
+							</a>
+							<a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_span" target="_blank">
+								<h5>&lt;span&gt;</h5>
+								<p>Inline text</p>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="resources-section-content-subsection" id="css-properties-for-typography">
+					<h3><a href="#css-properties-for-typography">CSS Properties for Typography</a></h3>
+					<div class="resources-section-content-subsection-content">
+						<div class="resources-section-content-subsection-content-info">
+							<p>
+								Coming soon!
+							</p>
+						</div>
+
+						<h4>Links</h4>
+						<div class="resources-section-content-subsection-content-links">
+							<a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_font-size_px" target="_blank">
+								<h5>“font-size”</h5>
+								<p>Font size</p>
+							</a>
+							<a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_color" target="_blank">
+								<h5>“color”</h5>
+								<p>Font color</p>
+							</a>
+							<a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_text-align" target="_blank">
+								<h5>“text-align”</h5>
+								<p>Text alignment</p>
+							</a>
+							<a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_letter-spacing" target="_blank">
+								<h5>“letter-spacing”</h5>
+								<p>Letter spacing (tracking)</p>
+							</a>
+							<a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_text_word-spacing" target="_blank">
+								<h5>“word-spacing”</h5>
+								<p>Word spacing</p>
+							</a>
+							<a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_line-height" target="_blank">
+								<h5>“line-height”</h5>
+								<p>Line height (leading)</p>
+							</a>
+							<a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_text-transform" target="_blank">
+								<h5>“text-transform”</h5>
+								<p>Forced capitalization</p>
+							</a>
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration" target="_blank">
+								<h5>“text-decoration”</h5>
+								<p>Underline and similar decorations</p>
+							</a>
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow" target="_blank">
+								<h5>“text-shadow”</h5>
+								<p>Drop shadow specifically for text</p>
+							</a>
+							<a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_font-weight" target="_blank">
+								<h5>“font-weight”</h5>
+								<p>Boldness</p>
+							</a>
+							<a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_font-family" target="_blank">
+								<h5>“font-family”</h5>
+								<p>Font/typeface</p>
+							</a>
+							<a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" target="_blank">
+								<h5>Web-safe fonts</h5>
+								<p>Fonts that are available on (nearly) every computer</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="resources-section" style="--primary: var(--green)" data-color="green" id="unit-2">
+			<div class="resources-section-title">
+				<div class="resources-section-title-number">Unit 2</div>
+				<h2><a href="#unit-2">The Box Model</a></h2>
+				<p>
+					Coming soon!
+				</p>
+			</div>
+
+			<div class="resources-section-content">
+				<div class="resources-section-content-subsection" id="">
+					<h3><a href="#">Coming soon!</a></h3>
+					<div class="resources-section-content-subsection-content">
+						<div class="resources-section-content-subsection-content-info">
+							<p>
+								Coming soon!
+							</p>
+						</div>
+
+						<h4>Links</h4>
+						<div class="resources-section-content-subsection-content-links">
+							<a href="/" target="_blank">
+								<h5>Coming soon!</h5>
+								<p>Coming soon!</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="resources-section" style="--primary: var(--blue);" data-color="blue" id="unit-3">
+			<div class="resources-section-title">
+				<div class="resources-section-title-number">Unit 3</div>
+				<h2><a href="#unit-3">Layout</a></h2>
+				<p>
+					Coming soon!
+				</p>
+			</div>
+
+			<div class="resources-section-content">
+				<div class="resources-section-content-subsection" id="">
+					<h3><a href="#">Coming soon!</a></h3>
+					<div class="resources-section-content-subsection-content">
+						<div class="resources-section-content-subsection-content-info">
+							<p>
+								Coming soon!
+							</p>
+						</div>
+
+						<h4>Links</h4>
+						<div class="resources-section-content-subsection-content-links">
+							<a href="/" target="_blank">
+								<h5>Coming soon!</h5>
+								<p>Coming soon!</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="resources-section" style="--primary: var(--yellow);" data-color="yellow" id="unit-4">
+			<div class="resources-section-title">
+				<div class="resources-section-title-number">Unit 4</div>
+				<h2><a href="#unit-4">Interaction</a></h2>
+				<p>
+					Coming soon!
+				</p>
+			</div>
+
+			<div class="resources-section-content">
+				<div class="resources-section-content-subsection" id="">
+					<h3><a href="#">Coming soon!</a></h3>
+					<div class="resources-section-content-subsection-content">
+						<div class="resources-section-content-subsection-content-info">
+							<p>
+								Coming soon!
+							</p>
+						</div>
+
+						<h4>Links</h4>
+						<div class="resources-section-content-subsection-content-links">
+							<a href="/" target="_blank">
+								<h5>Coming soon!</h5>
+								<p>Coming soon!</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="resources-section" style="--primary: var(--purple);" data-color="purple" id="unit-5">
+			<div class="resources-section-title">
+				<div class="resources-section-title-number">Unit 5</div>
+				<h2><a href="#unit-5">Loops</a></h2>
+				<p>
+					Coming soon!
+				</p>
+			</div>
+
+			<div class="resources-section-content">
+				<div class="resources-section-content-subsection" id="">
+					<h3><a href="#">Coming soon!</a></h3>
+					<div class="resources-section-content-subsection-content">
+						<div class="resources-section-content-subsection-content-info">
+							<p>
+								Coming soon!
+							</p>
+						</div>
+
+						<h4>Links</h4>
+						<div class="resources-section-content-subsection-content-links">
+							<a href="/" target="_blank">
+								<h5>Coming soon!</h5>
+								<p>Coming soon!</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section class="resources-section" style="--primary: var(--red);" data-color="red" id="unit-6">
+			<div class="resources-section-title">
+				<div class="resources-section-title-number">Unit 6</div>
+				<h2><a href="#unit-6">Data</a></h2>
+				<p>
+					Coming soon!
+				</p>
+			</div>
+
+			<div class="resources-section-content">
+				<div class="resources-section-content-subsection" id="">
+					<h3><a href="#">Coming soon!</a></h3>
+					<div class="resources-section-content-subsection-content">
+						<div class="resources-section-content-subsection-content-info">
+							<p>
+								Coming soon!
+							</p>
+						</div>
+
+						<h4>Links</h4>
+						<div class="resources-section-content-subsection-content-links">
+							<a href="/" target="_blank">
+								<h5>Coming soon!</h5>
+								<p>Coming soon!</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div id="trail"></div>
+	<script src="/script.js"></script>
+	<script src="/cursor.js"></script>
+</body>
+</html>
