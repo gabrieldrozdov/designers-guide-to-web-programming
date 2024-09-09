@@ -15,7 +15,7 @@ let activeColor = sectionColor;
 
 var x = [],
 	y = [],
-	segNum = 200,
+	segNum = 100,
 	segLength = 2,
 	rot = 0,
 	rotDir = 0.07
@@ -111,7 +111,7 @@ for (let link of document.querySelectorAll('button')) {
 }
 
 // Change color per section
-for (let section of document.querySelectorAll('.resources-section')) {
+for (let section of document.querySelectorAll('.resources-unit')) {
 	section.addEventListener('mouseenter', () => {
 		sectionColor = section.dataset.color;
 		activeColor = sectionColor
