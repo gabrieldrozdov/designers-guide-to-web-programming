@@ -1270,6 +1270,28 @@
 							]
 						}
 					]
+				},
+				{
+					"display-name": "Floating Content with CSS",
+					"id": "CSS",
+					"resources": [
+						{
+							"title": "float: <span>right;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/float"],
+								["W3Schools", "https://www.w3schools.com/css/css_float.asp"]
+							]
+						},
+						{
+							"title": "clear: <span>left;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/clear"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_class_clear.php"]
+							]
+						}
+					]
 				}
 			]
 		},
@@ -1464,7 +1486,7 @@
 	],
 	[
 		{
-			"display-name": "Media Queries",
+			"display-name": "@media Queries",
 			"id": "media-queries",
 			"info": "<p>What does it mean for a website to be <strong>responsive</strong>? For starters, it means that no matter your screen size, the site should adjust its layout keep a good user experience.</p>",
 			"subsections": [
@@ -1830,6 +1852,106 @@
 							"links": [
 								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors"],
 								["W3Schools", "https://www.w3schools.com/cssref/css_selectors.php"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Manual Positioning",
+			"id": "manual-positioning",
+			"info": "<p>Coming soon!</p>",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Relative Positioning",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/position#relative_positioning"]
+							]
+						},
+						{
+							"title": "Absolute Positioning",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/position#absolute_positioning"]
+							]
+						},
+						{
+							"title": "Fixed Positioning",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed_positioning"]
+							]
+						},
+						{
+							"title": "Sticky Positioning",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky_positioning"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "CSS Positioning",
+							"desc": "",
+							"links": [
+								["W3Schools", "https://www.w3schools.com/css/css_positioning.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties",
+					"id": "css-properties",
+					"resources": [
+						{
+							"title": "position: <span>absolute;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/position"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_class_position.php"]
+							]
+						},
+						{
+							"title": "top: <span>20px;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/top"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_pos_top.php"]
+							]
+						},
+						{
+							"title": "right: <span>5vw;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/right"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_pos_right.php"]
+							]
+						},
+						{
+							"title": "bottom: <span>10in;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/bottom"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_pos_bottom.php"]
+							]
+						},
+						{
+							"title": "left: <span>50%;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/left"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_pos_left.php"]
 							]
 						}
 					]
