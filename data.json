@@ -1,0 +1,1853 @@
+[
+	[
+		{
+			"display-name": "Online Resources",
+			"id": "online-resources",
+			"info": "<p>This guide is like a tour of the Internet. As you follow along, you’ll find links to a variety of resources that real-world developers use. In particular, you’ll find tons of links to <strong>MDN</strong> and <strong>W3Schools</strong>, two sites dedicated to documenting how web code works. While MDN usually provides more up-to-date information, W3Schools offers a friendlier interface. Together, the sites cover everything you need to know to make your own websites.</p><p>Additionally, you’ll find GD with GD links scattered throughout this guide. These include coding demos (via <strong>DEMOLAND</strong>) to help tie concepts together and exercises (via <strong>test-projct-1.html</strong>) to put said concepts in use.</p>",
+			"subsections": [
+				{
+					"display-name": "Online Resources",
+					"id": "online-resources",
+					"resources": [
+						{
+							"title": "MDN",
+							"desc": "Web code documentation (more up-to-date, but sometimes overwhelming)",
+							"links": [
+								["Visit site", "https://developer.mozilla.org/en-US/"]
+							]
+						},
+						{
+							"title": "W3Schools",
+							"desc": "Web code documentation (less up-to-date, but friendlier)",
+							"links": [
+								["Visit site", "https://www.w3schools.com/"]
+							]
+						},
+						{
+							"title": "DEMOLAND",
+							"desc": "In-browser editor for viewing code demos",
+							"links": [
+								["Visit site", "https://demoland.gdwithgd.com/"]
+							]
+						},
+						{
+							"title": "test-project-1.html",
+							"desc": "Creative coding exercises",
+							"links": [
+								["Visit site", "https://testproject1.gdwithgd.com/"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "HTML Files",
+			"id": "html-files",
+			"info": "<p>A website is an HTML (or <strong>.html</strong>) file. What does that mean?</p><p>Code is just text stored in a file. We call this plaintext, because it doesn’t have any associated design (like font or color). Instead, it’s just text. The way we can tell programming languages apart is by their <strong>syntax</strong>, or their rules. HTML’s main rule is that we separate information by writing <strong>HTML elements</strong>.<p>This means that HTML doesn’t care that much about tabs, spaces, or line breaks. We’ll still use them, but mainly to organize our code. To get around this, we’ll need to use HTML elements.</p>",
+			"subsections": [
+				{
+					"display-name": "Demos and Exercises",
+					"id": "demos-and-exercises",
+					"resources": [
+						{
+							"title": "A Basic HTML File",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-template"]
+							]
+						},
+						{
+							"title": "ascii-art.html",
+							"desc": "Turn text into art!",
+							"links": [
+								["Open exercise", "https://testproject1.gdwithgd.com/#programmatic-poetry"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "HTML (HyperText Markup Language)",
+							"desc": "The main programming language for the web",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"],
+								["W3Schools", "https://www.w3schools.com/html/"]
+							]
+						},
+						{
+							"title": "HTML Elements",
+							"desc": "A piece of content on a website (text, images, metadata, etc.)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Glossary/Element"],
+								["W3Schools", "https://www.w3schools.com/html/html_elements.asp"],
+								["All HTML elements", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"]
+							]
+						},
+						{
+							"title": "HTML Comments",
+							"desc": "Notes written into an HTML file",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Comments"],
+								["W3Schools", "https://www.w3schools.com/html/html_comments.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Basic HTML Elements",
+					"id": "basic-html-elements",
+					"resources": [
+						{
+							"title": "&lt;html&gt; <span>_</span> &lt;/html&gt;",
+							"desc": "Contains your entire HTML document",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_html.asp"]
+							]
+						},
+						{
+							"title": "&lt;head&gt; <span>_</span> &lt;/head&gt;",
+							"desc": "Invisible metadata relating to your website",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"],
+								["W3Schools", "https://www.w3schools.com/html/html_head.asp"]
+							]
+						},
+						{
+							"title": "&lt;meta&gt; <span>_</span> &lt;/meta&gt;",
+							"desc": "Multi-use metadata element",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_meta.asp"]
+							]
+						},
+						{
+							"title": "&lt;title&gt; <span>_</span> &lt;/title&gt;",
+							"desc": "The title that appears in your browser tab",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_title.asp"]
+							]
+						},
+						{
+							"title": "&lt;body&gt; <span>_</span> &lt;/body&gt;",
+							"desc": "The visible content on your site",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_body.asp"]
+							]
+						},
+						{
+							"title": "&lt;br&gt;",
+							"desc": "Line breaks (no closing tag!)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_br.asp"]
+							]
+						},
+						{
+							"title": "&lt;pre&gt; <span>_</span> &lt;/pre&gt;",
+							"desc": "Preformatted text",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_pre.asp"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Typesetting with HTML",
+			"id": "typesetting-with-html",
+			"info": "<p>We can think of HTML as the <strong>content</strong> on your website. There are different kinds of content, but the most basic kind is text. HTML handles text via several dedicated HTML elements, from paragraphs to headings to lists and more. Each of these elements comes with its own set of default styles (which we will soon be able to override). For now, let’s make a website that actually says something!</p><p>Note: this is NOT a complete list of HTML elements! These are just the most common elements you’ll encounter for typography.</p>",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "HTML Elements for Typography",
+							"desc": "Overview of typographic HTML elements",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-elements"]
+							]
+						},
+						{
+							"title": "Typographic Hierarchy",
+							"desc": "Example of how you might code a basic webpage",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-hierarchy"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "HTML Attributes",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"],
+								["W3Schools", "https://www.w3schools.com/html/html_attributes.asp"]
+							]
+						},
+						{
+							"title": "HTML Entities",
+							"desc": "Special codes for specific characters you can’t type otherwise (like the &lt; symbol)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Glossary/Character_reference"],
+								["W3Schools", "https://www.w3schools.com/html/html_entities.asp"],
+								["All HTML entities", "https://www.toptal.com/designers/htmlarrows/symbols/"]
+							]
+						},
+						{
+							"title": "HTML Text Fundamentals",
+							"desc": "Deep dive into typography on the web",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Typographic HTML Elements",
+					"id": "typographic-html-elements",
+					"resources": [
+						{
+							"title": "&lt;p&gt; <span>_</span> &lt;/p&gt;",
+							"desc": "Paragraphs",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"],
+								["W3Schools", "https://www.w3schools.com/html/html_paragraphs.asp"]
+							]
+						},
+						{
+							"title": "&lt;h1&gt; <span>_</span> &lt;/h1&gt;",
+							"desc": "Headings (&lt;h1&gt;-&lt;h6&gt;)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"],
+								["W3Schools", "https://www.w3schools.com/htmL/html_headings.asp"]
+							]
+						},
+						{
+							"title": "&lt;ul&gt; <span>_</span> &lt;/ul&gt;",
+							"desc": "Unordered (bulleted) lists",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_ul.asp"]
+							]
+						},
+						{
+							"title": "&lt;ol&gt; <span>_</span> &lt;/ol&gt;",
+							"desc": "Ordered (numbered) lists",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_ol.asp"]
+							]
+						},
+						{
+							"title": "&lt;li&gt; <span>_</span> &lt;/li&gt;",
+							"desc": "List items",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_li.asp"]
+							]
+						},
+						{
+							"title": "&lt;strong&gt; <span>_</span> &lt;/strong&gt;",
+							"desc": "Bold (important) text",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_strong.asp"]
+							]
+						},
+						{
+							"title": "&lt;em&gt; <span>_</span> &lt;/em&gt;",
+							"desc": "Italic (emphasized) text",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_em.asp"]
+							]
+						},
+						{
+							"title": "&lt;sup&gt; <span>_</span> &lt;/sup&gt;",
+							"desc": "Superscript",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_sup.asp"]
+							]
+						},
+						{
+							"title": "&lt;sub&gt; <span>_</span> &lt;/sub&gt;",
+							"desc": "Subscript",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_sub.asp"]
+							]
+						},
+						{
+							"title": "&lt;a href=\"<span>url.com</span>\"&gt; <span>_</span> &lt;/a&gt;",
+							"desc": "Links",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_a.asp"]
+							]
+						},
+						{
+							"title": "&lt;table&gt; <span>_</span> &lt;/table&gt;",
+							"desc": "Tables (and other related elements)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"],
+								["W3Schools", "https://www.w3schools.com/html/html_tables.asp"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Styling Text with CSS",
+			"id": "styling-text-with-css",
+			"info": "<p>There’s not much you can do with just HTML. To start making your website pretty, we’ll need to use CSS. <strong>CSS (Cascading Style Sheets)</strong> is another programming language that works with HTML to style HTML elements.</p><p>CSS mainly uses two things: <strong>properties</strong> and <strong>classes</strong>. Properties define the different visual characteristics of HTML elements, while classes organize sets of properties so that you can apply all of them at once wherever you want. We can even embed CSS right into an HTML element’s opening tag!</p>",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "CSS Properties and Classes",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-css"]
+							]
+						},
+						{
+							"title": "Inline CSS",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-inline-css"]
+							]
+						},
+						{
+							"title": "Color Codes",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-colors"]
+							]
+						},
+						{
+							"title": "Using the Inspect Tool",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-inspect"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "CSS Syntax",
+							"desc": "The rules for writing CSS",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax"],
+								["W3Schools", "https://www.w3schools.com/css/css_syntax.ASP"]
+							]
+						},
+						{
+							"title": "CSS Comments",
+							"desc": "Notes written within CSS",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/Comments"],
+								["W3Schools", "https://www.w3schools.com/css/css_comments.asp"]
+							]
+						},
+						{
+							"title": "CSS Specificity",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity"],
+								["W3Schools", "https://www.w3schools.com/css/css_specificity.asp"],
+								["Specificity Calculator", "https://specificity.keegan.st/"]
+							]
+						},
+						{
+							"title": "CSS Units",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"],
+								["W3Schools", "https://www.w3schools.com/cssref/css_units.php"]
+							]
+						},
+						{
+							"title": "CSS Colors",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"],
+								["W3Schools", "https://www.w3schools.com/css/css_colors.asp"],
+								["Named CSS Colors", "https://developer.mozilla.org/en-US/docs/Web/CSS/named-color"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Adding CSS to HTML Elements",
+					"resources": [
+						{
+							"title": "&lt;style&gt; <span>_</span> &lt;/style&gt;",
+							"desc": "Element for writing CSS in an HTML document",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_style.asp"],
+								["All HTML elements", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"]
+							]
+						},
+						{
+							"title": ".class-name { <span>color: red; font-size: 12px;</span> }",
+							"desc": "CSS classes (applying CSS to multiple HTML elements)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors"],
+								["W3Schools", "https://www.w3schools.com/csSref/sel_class.php"]
+							]
+						},
+						{
+							"title": "style=\"<span>color: red; font-size: 12px;</span>\"",
+							"desc": "Inline CSS (applying CSS to a single HTML element)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style"],
+								["W3Schools", "https://www.w3schools.com/tags/att_style.asp"]
+							]
+						},
+						{
+							"title": "&lt;span&gt; <span>_</span> &lt;/span&gt;",
+							"desc": "Inline text element (for adding CSS to specific words)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_span.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties for Typography",
+					"id": "css-properties-for-typography",
+					"resources": [
+						{
+							"title": "font-size: <span>24px;</span>",
+							"desc": "Font size",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"],
+								["W3Schools", "https://www.w3schools.com/css/css_font_size.asp"]
+							]
+						},
+						{
+							"title": "color: <span>rgb(255,0,0);</span>",
+							"desc": "Font color",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/color"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_text_color.php"]
+							]
+						},
+						{
+							"title": "text-align: <span>center;</span>",
+							"desc": "Text alignment",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_text_text-align.php"]
+							]
+						},
+						{
+							"title": "letter-spacing: <span>.02em;</span>",
+							"desc": "Letter spacing (tracking)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_text_letter-spacing.php"]
+							]
+						},
+						{
+							"title": "word-spacing: <span>.5em;</span>",
+							"desc": "Word spacing",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_text_word-spacing.php"]
+							]
+						},
+						{
+							"title": "line-height: <span>1.4em;</span>",
+							"desc": "Line height (leading)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_dim_line-height.php"]
+							]
+						},
+						{
+							"title": "text-transform: <span>uppercase;</span>",
+							"desc": "Forced capitalization",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_text_text-transform.php"]
+							]
+						},
+						{
+							"title": "text-decoration: <span>1px green wavy underline;</span>",
+							"desc": "Underline and similar decorations",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_text_text-decoration.php"]
+							]
+						},
+						{
+							"title": "text-underline-offset: <span>.2em;</span>",
+							"desc": "Gap between text and underline",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_text-underline-offset.php"]
+							]
+						},
+						{
+							"title": "text-shadow: <span>5px 5px 10px rgba(0,0,0,.5);</span>",
+							"desc": "Drop shadow specifically for text",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_text-shadow.php"]
+							]
+						},
+						{
+							"title": "font-weight: <span>bold;</span>",
+							"desc": "Boldness",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_font_weight.php"]
+							]
+						},
+						{
+							"title": "font-family: <span>sans-serif;</span>",
+							"desc": "Font/typeface",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_font_font-family.php"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Launching a Website",
+			"id": "launching-a-website",
+			"info": "<p>Coming soon!</p>",
+			"subsections": [
+				{
+					"display-name": "Tutorials",
+					"id": "tutorials",
+					"resources": [
+						{
+							"title": "Baby Steps",
+							"desc": "Everything you need to know to launch a website",
+							"links": [
+								["Visit site", "https://babysteps.gdwithgd.com/"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "HTML File Paths",
+							"desc": "",
+							"links": [
+								["W3Schools", "https://www.w3schools.com/html/html_filepaths.asp"]
+							]
+						},
+						{
+							"title": "External CSS",
+							"desc": "",
+							"links": [
+								["W3Schools", "https://www.w3schools.com/css/css_external.asp"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Web Fonts",
+			"id": "web-fonts",
+			"info": "<p>Coming soon!</p>",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Custom Fonts",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-custom-fonts"]
+							]
+						},
+						{
+							"title": "Variable Fonts",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-variable-fonts"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "Web-safe Fonts",
+							"desc": "Fonts that are available on (nearly) every computer",
+							"links": [
+								["See list", "https://www.cssfontstack.com/"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Importing Custom Fonts with CSS",
+					"id": "importing-custom-fonts-with-css",
+					"resources": [
+						{
+							"title": "@font-face { <span>_</span> }",
+							"desc": "Importing custom fonts via CSS",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_font-face_rule.php"]
+							]
+						},
+						{
+							"title": "font-weight: <span>500;</span>",
+							"desc": "Specify a font’s weight (or range of weights for variable fonts, e.g. 100 900)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_font_weight.php"]
+							]
+						},
+						{
+							"title": "font-style: <span>italic;</span>",
+							"desc": "Specify a font’s style",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-style"],
+								["W3Schools", "https://www.w3schools.com/css/css_font_style.asp"]
+							]
+						},
+						{
+							"title": "font-variation-settings: <span>\"wght\" 500, \"SRFF\" 0;</span>",
+							"desc": "Setting values for variable font axes",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings"]
+							]
+						},
+						{
+							"title": "font-feature-settings: <span>\"wght\" 500, \"SRFF\" 0;</span>",
+							"desc": "Turning on or off OpenType features for your font",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_font-feature-settings.php"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Places to Download Free Fonts",
+					"id": "places-to-download-free-fonts",
+					"resources": [
+						{
+							"title": "Google Fonts",
+							"desc": "",
+							"links": [
+								["Visit site", "Thttps://fonts.google.com/ODO"]
+							]
+						},
+						{
+							"title": "Too Much Type",
+							"desc": "",
+							"links": [
+								["Visit site", "https://toomuchtype.com/"]
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	[
+		{
+			"display-name": "Basics of the Box Model",
+			"id": "basics-of-the-box-model",
+			"info": "Coming soon!",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Basics of the Box Model",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-basics"]
+							]
+						},
+						{
+							"title": "Units",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-units"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "The Box Model",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model"],
+								["W3Schools", "https://www.w3schools.com/css/css_boxmodel.asp"]
+							]
+						},
+						{
+							"title": "CSS Units",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"],
+								["W3Schools", "https://www.w3schools.com/cssref/css_units.php"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties for Sizing",
+					"id": "css-properties-for-sizing",
+					"resources": [
+						{
+							"title": "width: <span>50%;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/width"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_dim_width.php"]
+							]
+						},
+						{
+							"title": "min-width: <span>100px;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/min-width"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_dim_min-width.php"]
+							]
+						},
+						{
+							"title": "max-width: <span>1200px;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/max-width"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_dim_max-width.php"]
+							]
+						},
+						{
+							"title": "height: <span>100vh;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/height"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_dim_height.php"]
+							]
+						},
+						{
+							"title": "min-height: <span>2em;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/min-height"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_dim_min-height.php"]
+							]
+						},
+						{
+							"title": "max-height: <span>600px;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/max-height"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_dim_max-height.php"]
+							]
+						},
+						{
+							"title": "aspect-ratio: <span>1 / 1;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"],
+								["W3Schools", "https://www.w3schools.com/cssref/css_pr_aspect-ratio.php"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties for Spacing",
+					"id": "css-properties-for-spacing",
+					"resources": [
+						{
+							"title": "margin: <span>0 auto;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"],
+								["W3Schools", "https://www.w3schools.com/css/css_margin.asp"]
+							]
+						},
+						{
+							"title": "padding: <span>10px 20px 30px 40px;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"],
+								["W3Schools", "https://www.w3schools.com/css/css_padding.asp"]
+							]
+						},
+						{
+							"title": "border: <span>1px solid black;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/border"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_border.php"]
+							]
+						},
+						{
+							"title": "outline: <span>1px solid black;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/outline"],
+								["W3Schools", "https://www.w3schools.com/css/css_outline.asp"]
+							]
+						},
+						{
+							"title": "outline-offset: <span>20px;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset"],
+								["W3Schools", "https://www.w3schools.com/css/css_outline_offset.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties for Styling Boxes",
+					"id": "css-properties-for-styling-boxes",
+					"resources": [
+						{
+							"title": "border-radius: <span>10px;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_border-radius.php"]
+							]
+						},
+						{
+							"title": "background-color: <span>red;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://www.w3schools.com/cssref/pr_background-color.php"],
+								["W3Schools", "https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"]
+							]
+						},
+						{
+							"title": "box-shadow: <span>10px 10px 20px rgba(0,0,0,.5);</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_box-shadow.php"]
+							]
+						},
+						{
+							"title": "opacity: <span>.5;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/opacity"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_opacity.php"]
+							]
+						},
+						{
+							"title": "transform: <span>scale(2) rotate(10deg);</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/transform"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_transform.php"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Box Sizing",
+			"id": "box-sizing",
+			"info": "Coming soon!",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Box Sizing",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-box-sizing"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "box-sizing: <span>border-box;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"],
+								["W3Schools", "https://www.w3schools.com/css/css3_box-sizing.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Overriding Default CSS Properties",
+					"id": "overriding-default-css-properties",
+					"resources": [
+						{
+							"title": "* { <span>_</span> }",
+							"desc": "Universal selector (apply CSS to every HTML element",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors"],
+								["W3Schools", "https://www.w3schools.com/cssref/sel_all.php"]
+							]
+						},
+						{
+							"title": "Default CSS Properties",
+							"desc": "",
+							"links": [
+								["W3Schools", "https://www.w3schools.com/cssref/css_default_values.php"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Inline vs. Block Elements",
+			"id": "inline-vs-block-elements",
+			"info": "Coming soon!",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Using the “display” property",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-display"]
+							]
+						},
+						{
+							"title": "Working with Divs",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-divs"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "Inline vs. Block Elements",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow"],
+								["W3Schools", "https://www.w3schools.com/html/html_blocks.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "HTML Elements",
+					"id": "html-elements",
+					"resources": [
+						{
+							"title": "&lt;div&gt; <span>_</span> &lt;/div&gt;",
+							"desc": "Generic block element",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_div.ASP"]
+							]
+						},
+						{
+							"title": "&lt;span&gt; <span>_</span> &lt;/span&gt;",
+							"desc": "Generic inline element",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_span.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties",
+					"id": "css-properties",
+					"resources": [
+						{
+							"title": "display: block;",
+							"desc": "Set an element to block, inline, inline-block, or none (we’ll have more options later!)",
+							"links": [
+								["W3Schools", "https://www.w3schools.com/cssref/pr_class_display.php"]
+							]
+						},
+						{
+							"title": "overflow: <span>scroll;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"],
+								["W3Schools", "https://www.w3schools.com/css/css_overflow.asp"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Images",
+			"id": "images",
+			"info": "Coming soon!",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Responsive Images",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-images"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "HTML Elements",
+					"id": "html-elements",
+					"resources": [
+						{
+							"title": "&lt;img src=\"<span>url or file path</span>\"&gt;",
+							"desc": "Images (no closing tag!)",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_img.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties for Styling Images",
+					"id": "css-properties-for-styling-images",
+					"resources": [
+						{
+							"title": "object-fit: <span>cover;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit"],
+								["W3Schools", "https://www.w3schools.com/css/css3_object-fit.asp"]
+							]
+						},
+						{
+							"title": "object-position: <span>center;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/object-position"],
+								["W3Schools", "https://www.w3schools.com/css/css3_object-position.asp"]
+							]
+						},
+						{
+							"title": "filter: <span>invert(100%) blur(2px);</span>",
+							"desc": "Works on any element!",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/filter"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_filter.php"]
+							]
+						},
+						{
+							"title": "mix-blend-mode: <span>overlay;</span>",
+							"desc": "Works on any element!",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_mix-blend-mode.php"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Adding Images Using CSS",
+					"id": "adding-images-using-css",
+					"resources": [
+						{
+							"title": "background-image: url(\"<span>url or file path</span>\")<span>;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/background-image"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_background-image.php"]
+							]
+						},
+						{
+							"title": "background-size: <span>cover;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/background-size"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_background-size.php"]
+							]
+						},
+						{
+							"title": "background-repeat: <span>no-repeat;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_background-repeat.php"]
+							]
+						},
+						{
+							"title": "background-position: <span>center;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/background-position"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_background-position.php"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Laying Out an Article",
+			"id": "laying-out-an-article",
+			"info": "Coming soon!",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Grouping Elements",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-grouping"]
+							]
+						},
+						{
+							"title": "Anchor Links and IDs",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-anchor-links"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "Semantic HTML Elements",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantic_elements"],
+								["W3Schools", "https://www.w3schools.com/html/html5_semantic_elements.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Anchor Links",
+					"id": "anchor-links",
+					"resources": [
+						{
+							"title": "&lt;a href=\"#<span>section-name</span>\"&gt; <span>_</span> &lt;/a&gt;",
+							"desc": "Anchor link element",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_a.asp"]
+							]
+						},
+						{
+							"title": "id=\"<span>section-name</span>\"",
+							"desc": "HTML element ID attribute",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id"],
+								["W3Schools", "https://www.w3schools.com/html/html_id.asp"]
+							]
+						},
+						{
+							"title": "scroll-behavior: smooth;",
+							"desc": "CSS property for smoothly scrolling when clicking an anchor link",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_scroll-behavior.php"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Semantic HTML Elements",
+					"id": "semantic-html-elements",
+					"resources": [
+						{
+							"title": "&lt;header&gt; <span>_</span> &lt;/header&gt",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_header.asp"]
+							]
+						},
+						{
+							"title": "&lt;nav&gt; <span>_</span> &lt;/nav&gt",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_nav.asp"]
+							]
+						},
+						{
+							"title": "&lt;main&gt; <span>_</span> &lt;/main&gt",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_main.asp"]
+							]
+						},
+						{
+							"title": "&lt;section&gt; <span>_</span> &lt;/section&gt",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_section.asp"]
+							]
+						},
+						{
+							"title": "&lt;footer&gt; <span>_</span> &lt;/footer&gt",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_footer.asp"]
+							]
+						},
+						{
+							"title": "&lt;figure&gt; <span>_</span> &lt;/figure&gt",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_figure.asp"]
+							]
+						},
+						{
+							"title": "&lt;figcaption&gt; <span>_</span> &lt;/figcaption&gt",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption"],
+								["W3Schools", "https://www.w3schools.com/tags/tag_figcaption.asp"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": ":hover and :active States",
+			"id": "hover-and-active-states",
+			"info": "Coming soon!",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Hover and Active States",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-hover-states"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "Pseudo-classes",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"],
+								["W3Schools", "https://www.w3schools.com/css/css_pseudo_classes.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Adding Hover States with CSS",
+					"id": "adding-hover-states-with-css",
+					"resources": [
+						{
+							"title": ":hover { <span>_</span> }",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/:hover"],
+								["W3Schools", "https://www.w3schools.com/cssref/sel_hover.php"]
+							]
+						},
+						{
+							"title": ":active { <span>_</span> }",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/:active"],
+								["W3Schools", "https://www.w3schools.com/cssref/sel_active.php"]
+							]
+						},
+						{
+							"title": "transition: <span>1s;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/transition"],
+								["W3Schools", "https://www.w3schools.com/css/css3_transitions.asp"]
+							]
+						},
+						{
+							"title": "transition-timing-function: <span>linear;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_transition-timing-function.php"],
+								["Easing Functions", "https://easings.net/"]
+							]
+						},
+						{
+							"title": "cursor: <span>pointer;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/cursor"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_class_cursor.php"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "@keyframes Animations",
+			"id": "keyframes-animations",
+			"info": "Coming soon!",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "@keyframes Animations",
+							"desc": "",
+							"links": [
+								["Open demo", "https://www.w3schools.com/css/css3_animations.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Creating Animations with CSS",
+					"id": "creating-animations-with-css",
+					"resources": [
+						{
+							"title": "@keyframes <span>my-animation</span> { <span>_</span> }",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php"]
+							]
+						},
+						{
+							"title": "animation-name: <span>my-animation;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_animation-name.php"]
+							]
+						},
+						{
+							"title": "animation-duration: <span>5s;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration"],
+								["W3Schools", "https://www.w3schools.com/CSSref/css3_pr_animation-duration.php"]
+							]
+						},
+						{
+							"title": "animation-delay: <span>-1s;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_animation-delay.php"]
+							]
+						},
+						{
+							"title": "animation-iteration-count: <span>infinite;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_animation-iteration-count.php"]
+							]
+						},
+						{
+							"title": "animation-direction: <span>alternate;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_animation-direction.php"]
+							]
+						},
+						{
+							"title": "animation-timing-function: <span>ease-in-out;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_animation-timing-function.php"],
+								["Timing Functions", "https://easings.net/"]
+							]
+						},
+						{
+							"title": "animation-fill-mode: <span>forwards;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_animation-fill-mode.php"]
+							]
+						},
+						{
+							"title": "animation: <span>my-animation 5s -1s infinite alternate ease-in-out forwards;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/animation"],
+								["W3Schools", "https://www.w3schools.com/css/css3_animations.asp"]
+							]
+						},
+						{
+							"title": "animation-play-state: <span>paused;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_animation-play-state.php"]
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	[
+		{
+			"display-name": "Media Queries",
+			"id": "media-queries",
+			"info": "<p>What does it mean for a website to be <strong>responsive</strong>? For starters, it means that no matter your screen size, the site should adjust its layout keep a good user experience.</p>",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Media Queries",
+							"desc": "",
+							"links": [
+								["W3Schools", "https://www.w3schools.com/css/css3_mediaqueries.asp"]
+							]
+						},
+						{
+							"title": "Typical Device Breakpoints",
+							"desc": "",
+							"links": [
+								["W3Schools", "https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "CSS Grid",
+			"id": "css-grid",
+			"info": "<p>Coming soon!</p>",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "CSS Grid",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout"],
+								["W3Schools", "https://www.w3schools.com/CSS/css_grid.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Tutorials",
+					"id": "tutorials",
+					"resources": [
+						{
+							"title": "Grid Garden",
+							"desc": "",
+							"links": [
+								["Visit site", "https://cssgridgarden.com/"]
+							]
+						},
+						{
+							"title": "An Interactive Guide to CSS Grid",
+							"desc": "",
+							"links": [
+								["Visit site", "https://www.joshwcomeau.com/css/interactive-guide-to-grid/"]
+							]
+						},
+						{
+							"title": "CSS Grid Layout Guide",
+							"desc": "",
+							"links": [
+								["Visit site", "https://css-tricks.com/snippets/css/complete-guide-grid/"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties for Grid Parents",
+					"id": "css-properties-for-grid-parents",
+					"resources": [
+						{
+							"title": "display: grid;",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/display"]
+							]
+						},
+						{
+							"title": "grid-template-columns: <span>1fr 2fr 1fr;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns"]
+							]
+						},
+						{
+							"title": "grid-template-rows: <span>repeat(3, 1fr);</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows"]
+							]
+						},
+						{
+							"title": "grid-auto-flow: <span>row;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow"]
+							]
+						},
+						{
+							"title": "gap: <span>10px 20px;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/gap"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_gap.php"]
+							]
+						},
+						{
+							"title": "grid-auto-columns: <span>1fr;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_grid-auto-columns.php"]
+							]
+						},
+						{
+							"title": "grid-auto-rows: <span>1fr;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_grid-auto-rows.php"]
+							]
+						},
+						{
+							"title": "grid-template-areas: <span>\"a b c\";</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas"],
+								["W3Schools", "https://www.w3schools.com/cssref/pr_grid-template-areas.php"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties for Grid Children",
+					"id": "css-properties-for-grid-children",
+					"resources": [
+						{
+							"title": "grid-column: <span>span 2;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column"]
+							]
+						},
+						{
+							"title": "grid-row: <span>1 / 3;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row"]
+							]
+						},
+						{
+							"title": "grid-area: <span>\"a\";</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area"]
+							]
+						},
+						{
+							"title": "align-self: <span>stretch;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"]
+							]
+						},
+						{
+							"title": "justify-self: <span>end;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Flexbox",
+			"id": "flexbox",
+			"info": "<p>Coming soon!</p>",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "Flexbox",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox"],
+								["W3Schools", "https://www.w3schools.com/css/css3_flexbox.asp"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Tutorials",
+					"id": "tutorials",
+					"resources": [
+						{
+							"title": "Flexbox Froggy",
+							"desc": "",
+							"links": [
+								["Visit site", "https://flexboxfroggy.com/"]
+							]
+						},
+						{
+							"title": "An Interactive Guide to Flexbox",
+							"desc": "",
+							"links": [
+								["Visit site", "https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/"]
+							]
+						},
+						{
+							"title": "CSS Flexbox Layout Guide",
+							"desc": "",
+							"links": [
+								["Visit site", "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties for Flexbox Parents",
+					"id": "css-properties-for-flexbox-parents",
+					"resources": [
+						{
+							"title": "display: flex;",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/display"]
+							]
+						},
+						{
+							"title": "flex-direction: <span>column;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_flex-direction.php"]
+							]
+						},
+						{
+							"title": "flex-wrap: <span>wrap;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"],
+								["W3Schools", "https://www.w3schools.com/CSSref/css3_pr_flex-wrap.php"]
+							]
+						},
+						{
+							"title": "gap: <span>10px 20px;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/gap"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_gap.php"]
+							]
+						},
+						{
+							"title": "align-items: <span>center;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_align-items.php"]
+							]
+						},
+						{
+							"title": "justify-content: <span>center;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_justify-content.php"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "CSS Properties for Flexbox Children",
+					"id": "css-properties-for-flexbox-children",
+					"resources": [
+						{
+							"title": "flex-grow: <span>1;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_flex-grow.php"]
+							]
+						},
+						{
+							"title": "flex-shrink: <span>0;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_flex-shrink.php"]
+							]
+						},
+						{
+							"title": "flex-basis: <span>auto;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis"],
+								["W3Schools", "https://www.w3schools.com/cssref/css3_pr_flex-basis.php"]
+							]
+						},
+						{
+							"title": "align-self: <span>stretch;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"]
+							]
+						},
+						{
+							"title": "justify-self: <span>end;</span>",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Advanced CSS Selectors",
+			"id": "advanced-css-selectors",
+			"info": "<p>Coming soon!</p>",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+						{
+							"title": "Nested CSS Selectors",
+							"desc": "",
+							"links": [
+								["Open demo", "https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-nested-selectors"]
+							]
+						}
+					]
+				},
+				{
+					"display-name": "Concepts",
+					"id": "concepts",
+					"resources": [
+						{
+							"title": "CSS Selectors",
+							"desc": "",
+							"links": [
+								["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors"],
+								["W3Schools", "https://www.w3schools.com/cssref/css_selectors.php"]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"display-name": "Putting It All Together",
+			"id": "putting-it-all-together",
+			"info": "<p>Coming soon!</p>",
+			"subsections": [
+				{
+					"display-name": "Demos",
+					"id": "demos",
+					"resources": [
+					]
+				}
+			]
+		}
+	]
+]

@@ -1,1079 +1,2975 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>The Designer’s Guide to Web Programming</title>
-	<meta name="author" content="GD with GD">
-	<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education">
-	<meta name="description" content="A guided tour through the weird, wacky, wonderful (and sometimes intimidating) world of web programming, with a focus on the fun stuff.">
-	<meta property="og:url" content="https://webprogramming.gdwithgd.com/">
-	<meta name="og:title" property="og:title" content="The Designer’s Guide to Web Programming">
-	<meta property="og:description" content="">
-	<meta property="og:image" content="/assets/meta/opengraph.jpg">
-	<link rel="icon" type="png" href="/assets/meta/favicon.png">
-	<link rel="stylesheet" href="/style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
-</head>
-<body>
-	<nav class="nav" data-active="0">
-		<button class="nav-close" onclick="toggleNav();">Close menu</button>
 
-		<a href="#unit-1" class="nav-link-section" style="--primary: var(--pink);">UNIT 1: Typography</a>
-		<a href="#unit-1-coding-resources" class="nav-link-subsection" style="--primary: var(--pink);">Coding Resources</a>
-		<a href="#unit-1-website-basics" class="nav-link-subsection" style="--primary: var(--pink);">Website Basics</a>
-		<a href="#unit-1-laying-out-typography" class="nav-link-subsection" style="--primary: var(--pink);">Laying Out Typography</a>
-		<a href="#unit-1-styling-typography" class="nav-link-subsection" style="--primary: var(--pink);">Styling Typography</a>
-		<a href="#unit-1-working-with-fonts" class="nav-link-subsection" style="--primary: var(--pink);">Working with Fonts</a>
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>The Designer’s Guide to Web Programming</title>
+			<meta name="author" content="GD with GD">
+			<meta name="keywords" content="Web Design, Web Development, Creative Coding, Design Education, Code Education">
+			<meta name="description" content="A guided tour through the weird, wacky, wonderful (and sometimes intimidating) world of web programming, with a focus on the fun stuff.">
+			<meta property="og:url" content="https://webprogramming.gdwithgd.com/">
+			<meta name="og:title" property="og:title" content="The Designer’s Guide to Web Programming">
+			<meta property="og:description" content="">
+			<meta property="og:image" content="/assets/meta/opengraph.jpg">
+			<link rel="icon" type="png" href="/assets/meta/favicon-white.png">
+			<link rel="stylesheet" href="/style.css">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+		</head>
+		<body>
+			<img class="cursor" src="/assets/ui/cursor.svg">
 
-		<div class="nav-divider"></div>
-
-		<a href="#unit-2" class="nav-link-section" style="--primary: var(--green);">UNIT 2: The Box Model</a>
-		<a href="#unit-2-basics-of-the-box-model" class="nav-link-subsection" style="--primary: var(--green);">Basics of the Box Model</a>
-		<a href="#unit-2-block-and-inline-elements" class="nav-link-subsection" style="--primary: var(--green);">Block and Inline Elements</a>
-		<a href="#unit-2-beyond-typography" class="nav-link-subsection" style="--primary: var(--green);">Beyond Typography</a>
-		<a href="#unit-2-basic-interaction-and-animation" class="nav-link-subsection" style="--primary: var(--green);">Basic Interaction and Animation</a>
-		<a href="#unit-2-advanced-css-selectors" class="nav-link-subsection" style="--primary: var(--green);">Advanced CSS Selectors</a>
-
-		<div class="nav-divider"></div>
+			<nav class="nav" data-active="0">
+				<button class="nav-close" onclick="toggleNav();">Close menu</button>
 		
-		<a href="#unit-3" class="nav-link-section" style="--primary: var(--blue);">Unit 3: Layout</a>
-		<a href="#" class="nav-link-subsection" style="--primary: var(--blue);">Coming soon!</a>
+				<a href="#unit-1" class="nav-link-section" style="--primary: var(--pink);" onclick="toggleNav();">UNIT 1: Typography</a>
+				
+			<a href="#unit-1-online-resources" class="nav-link-subsection" style="--primary: var(--pink);" onclick="toggleNav();">Online Resources</a>
+			<a href="#unit-1-html-files" class="nav-link-subsection" style="--primary: var(--pink);" onclick="toggleNav();">HTML Files</a>
+			<a href="#unit-1-typesetting-with-html" class="nav-link-subsection" style="--primary: var(--pink);" onclick="toggleNav();">Typesetting with HTML</a>
+			<a href="#unit-1-styling-text-with-css" class="nav-link-subsection" style="--primary: var(--pink);" onclick="toggleNav();">Styling Text with CSS</a>
+			<a href="#unit-1-launching-a-website" class="nav-link-subsection" style="--primary: var(--pink);" onclick="toggleNav();">Launching a Website</a>
+			<a href="#unit-1-web-fonts" class="nav-link-subsection" style="--primary: var(--pink);" onclick="toggleNav();">Web Fonts</a>
 
-		<div class="nav-divider"></div>
+				<a href="#unit-2" class="nav-link-section" style="--primary: var(--green);" onclick="toggleNav();">UNIT 2: The Box Model</a>
+				
+			<a href="#unit-2-basics-of-the-box-model" class="nav-link-subsection" style="--primary: var(--green);" onclick="toggleNav();">Basics of the Box Model</a>
+			<a href="#unit-2-box-sizing" class="nav-link-subsection" style="--primary: var(--green);" onclick="toggleNav();">Box Sizing</a>
+			<a href="#unit-2-inline-vs-block-elements" class="nav-link-subsection" style="--primary: var(--green);" onclick="toggleNav();">Inline vs. Block Elements</a>
+			<a href="#unit-2-images" class="nav-link-subsection" style="--primary: var(--green);" onclick="toggleNav();">Images</a>
+			<a href="#unit-2-laying-out-an-article" class="nav-link-subsection" style="--primary: var(--green);" onclick="toggleNav();">Laying Out an Article</a>
+			<a href="#unit-2-hover-and-active-states" class="nav-link-subsection" style="--primary: var(--green);" onclick="toggleNav();">:hover and :active States</a>
+			<a href="#unit-2-keyframes-animations" class="nav-link-subsection" style="--primary: var(--green);" onclick="toggleNav();">@keyframes Animations</a>
+				
+				<a href="#unit-3" class="nav-link-section" style="--primary: var(--blue);" onclick="toggleNav();">UNIT 3: Layout</a>
+				
+			<a href="#unit-3-media-queries" class="nav-link-subsection" style="--primary: var(--blue);" onclick="toggleNav();">Media Queries</a>
+			<a href="#unit-3-css-grid" class="nav-link-subsection" style="--primary: var(--blue);" onclick="toggleNav();">CSS Grid</a>
+			<a href="#unit-3-flexbox" class="nav-link-subsection" style="--primary: var(--blue);" onclick="toggleNav();">Flexbox</a>
+			<a href="#unit-3-advanced-css-selectors" class="nav-link-subsection" style="--primary: var(--blue);" onclick="toggleNav();">Advanced CSS Selectors</a>
+			<a href="#unit-3-putting-it-all-together" class="nav-link-subsection" style="--primary: var(--blue);" onclick="toggleNav();">Putting It All Together</a>
+				
+				<a href="#unit-4" class="nav-link-section" style="--primary: var(--yellow);" onclick="toggleNav();">UNIT 4: Interaction</a>
+				
+				
+				<a href="#unit-5" class="nav-link-section" style="--primary: var(--purple);" onclick="toggleNav();">UNIT 5: Loops</a>
+				
+				
+				<a href="#unit-6" class="nav-link-section" style="--primary: var(--red);" onclick="toggleNav();">UNIT 6: Data</a>
+				
+			</nav>
+			<button class="nav-toggle" onclick="toggleNav();">Menu</button>
+			<a href="https://gdwithgd.com/" target="_blank" class="nav-toggle nav-gd">GD with GD</a>
 		
-		<a href="#unit-4" class="nav-link-section" style="--primary: var(--yellow);">UNIT 4: Interaction</a>
-		<a href="#" class="nav-link-subsection" style="--primary: var(--yellow);">Coming soon!</a>
+			<header class="header">
+				<h1 class="header-title">
+					<div class="header-title-small">The Designer’s Guide to</div>
+					<div class="header-title-big"><span>Web</span> <span>Programming</span></div>
+					<a class="header-title-link" href="https://gdwithgd.com/" target="_blank">A project by GD with GD</a>
+				</h1>
 
-		<div class="nav-divider"></div>
+				<div class="header-desc">
+					<p>
+						Here’s a secret: no matter your skill level, you can always find wonderful ways to use code.
+					</p>
+					<p>
+						In this guided tour of web programming, we’ll walk through the resources that professional developers rely on everyday. And each time you learn something, you’ll unlock a wealth of new creative possibilities. We’ll break down these new possibilities through interactive demos and exercises.
+					</p>
+				</div>
 		
-		<a href="#unit-5" class="nav-link-section" style="--primary: var(--purple);">UNIT 5: Loops</a>
-		<a href="#" class="nav-link-subsection" style="--primary: var(--purple);">Coming soon!</a>
-
-		<div class="nav-divider"></div>
+				<div class="header-units">
+					<a href="#unit-1" class="header-units-link" style="--primary: var(--pink);">
+						<p class="header-units-link-number">Unit 1</p>
+						<p class="header-units-link-title">Typography</p>
+						<p class="header-units-link-desc">
+							Start by working with the designer’s most powerful material.
+						</p>
+					</a>
+					<a href="#unit-2" class="header-units-link" style="--primary: var(--green);">
+						<p class="header-units-link-number">Unit 2</p>
+						<p class="header-units-link-title">The Box Model</p>
+						<p class="header-units-link-desc">
+							Everything on the Internet is functionally a box, and it’s our job to make those boxes pretty.
+						</p>
+					</a>
+					<a href="#unit-3" class="header-units-link" style="--primary: var(--blue);">
+						<p class="header-units-link-number">Unit 3</p>
+						<p class="header-units-link-title">Layout</p>
+						<p class="header-units-link-desc">
+							Arranging content takes just a couple of lines of code, but that code can work in surprising ways.
+						</p>
+					</a>
+					<a href="#unit-4" class="header-units-link" style="--primary: var(--yellow);">
+						<p class="header-units-link-number">Unit 4</p>
+						<p class="header-units-link-title">Interaction</p>
+						<p class="header-units-link-desc">
+							Welcome to the world of JavaScript, where anything is possible (if you can code it).
+						</p>
+					</a>
+					<a href="#unit-5" class="header-units-link" style="--primary: var(--purple);">
+						<p class="header-units-link-number">Unit 5</p>
+						<p class="header-units-link-title">Loops</p>
+						<p class="header-units-link-desc">
+							Make your code work for you, with a little help from our friends called logic and math.
+						</p>
+					</a>
+					<a href="#unit-6" class="header-units-link" style="--primary: var(--red);">
+						<p class="header-units-link-number">Unit 6</p>
+						<p class="header-units-link-title">Data</p>
+						<p class="header-units-link-desc">
+							Put everything together, and by the end your site will basically code itself.
+						</p>
+					</a>
+				</div>
+			</header>
 		
-		<a href="#unit-6" class="nav-link-section" style="--primary: var(--red);">UNIT 6: Data</a>
-		<a href="#" class="nav-link-subsection" style="--primary: var(--red);">Coming soon!</a>
-	</nav>
-	<button class="nav-toggle" onclick="toggleNav();">Menu</button>
-	<a href="https://gdwithgd.com/" target="_blank" class="nav-gd">GD with GD</a>
-
-	<header class="header">
-		<div class="header-intro">
-			<h1 class="header-title">
-				<span class="header-title-small">The Designer’s Guide to</span>
-				<span class="header-title-big">Web Programming</span>
-			</h1>
-			<p class="header-desc">
-				A guided tour through the weird, wacky, wonderful (and sometimes intimidating) world of web programming, with a focus on the fun stuff.
-			</p>
-			<span class="header-intro-outline" style="--primary: var(--red);"></span>
-			<span class="header-intro-outline" style="animation-delay: -.25s; --primary: var(--blue);"></span>
-			<span class="header-intro-outline" style="animation-delay: -.5s; --primary: var(--purple);"></span>
-			<span class="header-intro-outline" style="animation-delay: -.75s; --primary: var(--yellow);"></span>
-			<span class="header-intro-outline" style="animation-delay: -1s; --primary: var(--pink);"></span>
-			<span class="header-intro-outline" style="animation-delay: -1.25s; --primary: var(--green);"></span>
-		</div>
-
-		<div class="header-units">
-			<a href="#unit-1" class="header-units-link" style="--primary: var(--pink);">
-				<p class="header-units-link-number">Unit 1</p>
-				<p class="header-units-link-title">Typography</p>
-				<p class="header-units-link-desc">
-					Start by working with the designer’s most powerful material.
-				</p>
-			</a>
-			<a href="#unit-2" class="header-units-link" style="--primary: var(--green);">
-				<p class="header-units-link-number">Unit 2</p>
-				<p class="header-units-link-title">The Box Model</p>
-				<p class="header-units-link-desc">
-					Everything on the Internet is functionally a box, and it’s our job to make those boxes pretty.
-				</p>
-			</a>
-			<a href="#unit-3" class="header-units-link" style="--primary: var(--blue);">
-				<p class="header-units-link-number">Unit 3</p>
-				<p class="header-units-link-title">Layout</p>
-				<p class="header-units-link-desc">
-					Arranging content takes just a couple of lines of code, but that code can work in surprising ways.
-				</p>
-			</a>
-			<a href="#unit-4" class="header-units-link" style="--primary: var(--yellow);">
-				<p class="header-units-link-number">Unit 4</p>
-				<p class="header-units-link-title">Interaction</p>
-				<p class="header-units-link-desc">
-					Welcome to the world of JavaScript, where anything is possible (if you can code it).
-				</p>
-			</a>
-			<a href="#unit-5" class="header-units-link" style="--primary: var(--purple);">
-				<p class="header-units-link-number">Unit 5</p>
-				<p class="header-units-link-title">Loops</p>
-				<p class="header-units-link-desc">
-					Make your code work for you, with a little help from our friends called logic and math.
-				</p>
-			</a>
-			<a href="#unit-6" class="header-units-link" style="--primary: var(--red);">
-				<p class="header-units-link-number">Unit 6</p>
-				<p class="header-units-link-title">Data</p>
-				<p class="header-units-link-desc">
-					Put everything together, and by the end your site will basically code itself.
-				</p>
-			</a>
-		</div>
-	</header>
-
-	<main class="resources">
-		<section class="resources-unit" style="--primary: var(--pink);" data-color="pink" id="unit-1">
-			<div class="resources-unit-title">
-				<div class="resources-unit-title-number">Unit 1</div>
-				<h2><a href="#unit-1">Typography</a></h2>
-				<p>
-					The designer’s most important material is written language, aka typography. Typography on the web differs wildly from typography for other mediums, like books. On the web, we can’t place type wherever we want it to go. Instead, we have to define a set of rules that pieces of typography, called HTML elements, will follow.
-				</p>
-				<p>
-					In this unit, we’ll learn about the basics of HTML and CSS by working with typography. We’ll start from nothing and make an empty website (literally) say something.
-				</p>
-			</div>
-
-			<div class="resources-unit-content">
-				<div class="unit-section" id="unit-1-coding-resources">
-					<h3><a href="#unit-1-coding-resources">Coding Resources</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
+			<main class="units">
+				<section class="unit" style="--primary: var(--pink);" data-color="pink" id="unit-1">
+					<div class="unit-heading">
+						<a href="#unit-1" class="unit-heading-title">
+							<div class="unit-heading-title-number">Unit 1</div>
+							<h2 class="unit-heading-title-name">Typography</h2>
+						</a>
+						<div class="unit-heading-desc">
 							<p>
-								In this guide, we’ll frequently make use of a few online resources. Here’s a little background on what they are.
+								To a designer, typography is everything. But unlike on other mediums, typography on the web is fluid because it has to adapt to a changing canvas — your screen size. This fluidity means that we can’t use traditional software to design a website. Instead, we have to use two programming languages: HTML and CSS.
 							</p>
 							<p>
-								From GD with GD (the creator of this site), we have two other websites: <strong>Baby Steps</strong> and DEMOLAND</strong>. Baby Steps is a guide that’ll help you start coding and launch your first website from scratch. DEMOLAND will teach you how to code through a collection of demos, presented entirely in your web browser.
+								Programming may seem scary, but web code is actually pretty simple. HTML and CSS basically just describe what should appear on your screen, and the most basic form of visual content is typography. So let’s jump right into coding and start making websites!
 							</p>
-							<p>
-								Then comes the two main repositories of web documentation: <strong>W3Schools</strong> and <strong>MDN Web Docs</strong>. These sites provide extensive information about EVERYTHING related to web programming. W3Schools has a friendlier (and sometimes simplified) approach, while MDN goes fully in-depth. That’s because MDN is run by some of the people that make the web run at all, namely Mozilla (developers of Firefox).
-							</p>
-							<p>
-								Lastly, I’ve linked to <strong>CodePen</strong> and <strong>CSS Tricks</strong> because they’re helpful resources to solve specific coding problems. We won’t be referencing them much, but they’re still good to know!
-							</p>
-						</div>
-
-						<h4>GD with GD</h4>
-						<div class="unit-links">
-							<a href="https://babysteps.gdwithgd.com/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>Baby Steps</h5>
-								<p>Guides to get you started coding websites</p>
-							</a>
-							<a href="https://demoland.gdwithgd.com/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>DEMOLAND</h5>
-								<p>In-browser code demos</p>
-							</a>
-						</div>
-
-						<h4>Online Documentation</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>W3Schools</h5>
-								<p>Beginner-focused documentation with lots of demos</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>MDN</h5>
-								<p>Professional-focused documentation with all of the information you could ever need</p>
-							</a>
-							<a href="https://codepen.io/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>CodePen</h5>
-								<p>Code demos for all sorts of things</p>
-							</a>
-							<a href="https://css-tricks.com/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>CSS Tricks</h5>
-								<p>Tips, articles, and coding breakdowns</p>
-							</a>
 						</div>
 					</div>
-				</div>
 
-				<div class="unit-section" id="unit-1-website-basics">
-					<h3><a href="#unit-1-website-basics">Website Basics</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								To make a website, you at least need to know the programming language HTML. <strong>HTML (Hypertext Markup Language)</strong> is pretty straightforward and works by organizing pieces of information into <strong>HTML elements</strong>, marked using <strong>HTML tags</strong>.
-							</p>
-							<p>
-								In this section, we’ll learn about the basic structure of an HTML page and the few elements that go into every single website.
-							</p>
-						</div>
-
-						<h4>Concepts</h4>
-						<div class="unit-links">
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-template" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>A Basic HTML File</h5>
-							</a>
-							<a href="https://www.w3schools.com/html/html_elements.asp" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>HTML Elements</h5>
-								<p>A piece of content on a website (text, images, etc.)</p>
-							</a>
-						</div>
-
-						<h4>Fundamental HTML Elements</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/tags/tag_html.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;html&gt;</h5>
-								<p>Contains your entire HTML document</p>
-							</a>
-							<a href="https://www.w3schools.com/html/html_head.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;head&gt;</h5>
-								<p>Invisible metadata relating to your website</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_meta.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;meta&gt;</h5>
-								<p>Multi-use metadata element</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;title&gt;</h5>
-								<p>The text that appears in your browser tab</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_body.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;body&gt;</h5>
-								<p>The visible content on your site</p>
-							</a>
+					<div class="unit-content">
+						
+				<div class="unit-section" id="unit-1-online-resources">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-1-online-resources">
+							<div class="unit-section-title-number">1.1</div>
+							<h3>Online Resources</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>This guide is like a tour of the Internet. As you follow along, you’ll find links to a variety of resources that real-world developers use. In particular, you’ll find tons of links to <strong>MDN</strong> and <strong>W3Schools</strong>, two sites dedicated to documenting how web code works. While MDN usually provides more up-to-date information, W3Schools offers a friendlier interface. Together, the sites cover everything you need to know to make your own websites.</p><p>Additionally, you’ll find GD with GD links scattered throughout this guide. These include coding demos (via <strong>DEMOLAND</strong>) to help tie concepts together and exercises (via <strong>test-projct-1.html</strong>) to put said concepts in use.</p>
 						</div>
 					</div>
-				</div>
-
-				<div class="unit-section" id="unit-1-laying-out-typography">
-					<h3><a href="#unit-1-laying-out-typography">Laying Out Typography</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								Now that we know what a webpage is, let’s start putting some text into one! There are several elements dedicated to different types of typography, from paragraphs to headings to lists and more. Each of these elements comes with its own set of default styles (which we will soon be able to override).
-							</p>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-1-online-resources-online-resources">
+						<a href="#unit-1-online-resources-online-resources" class="unit-subsection-title"><h4>Online Resources</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">MDN</h5>
+							<p class="unit-subsection-resource-desc">Web code documentation (more up-to-date, but sometimes overwhelming)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/" target="_blank">Visit site</a>
+						
+							</div>
 						</div>
-
-						<h4>Concepts</h4>
-						<div class="unit-links">
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-elements" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>HTML Elements for Typography</h5>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-hierarchy" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Typographic Hierarchy</h5>
-							</a>
-							<a href="https://www.w3schools.com/html/html_entities.asp" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>HTML Entities</h5>
-								<p>Codes for specific characters you can’t type otherwise</p>
-							</a>
-							<a href="https://www.w3schools.com/html/html_comments.asp" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>HTML Comments</h5>
-								<p>Notes within an HTML document</p>
-							</a>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">W3Schools</h5>
+							<p class="unit-subsection-resource-desc">Web code documentation (less up-to-date, but friendlier)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.w3schools.com/" target="_blank">Visit site</a>
+						
+							</div>
 						</div>
-
-						<h4>HTML Elements for Typography</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/tags/tag_p.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;p&gt;</h5>
-								<p>Paragraphs</p>
-							</a>
-							<a href="https://www.w3schools.com/htmL/html_headings.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;h1&gt;–&lt;h6&gt;</h5>
-								<p>Headings</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_br.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;br&gt;</h5>
-								<p>Line breaks (no closing tag!)</p>
-							</a>
-							<a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h5>
-								<p>Unordered lists, ordered lists, and list items</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_strong.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;strong&gt;</h5>
-								<p>Bold (important) text</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_em.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;em&gt;</h5>
-								<p>Italic (emphasized) text</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_sup.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;sup&gt;</h5>
-								<p>Superscript</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_sub.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;sub&gt;</h5>
-								<p>Subscript</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_span.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;span&gt;</h5>
-								<p>Inline text</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;a&gt;</h5>
-								<p>Links</p>
-							</a>
-							<a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;table&gt;</h5>
-								<p>Tables (and related HTML elements)</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_pre.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;pre&gt;</h5>
-								<p>Preformatted text</p>
-							</a>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">DEMOLAND</h5>
+							<p class="unit-subsection-resource-desc">In-browser editor for viewing code demos</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">test-project-1.html</h5>
+							<p class="unit-subsection-resource-desc">Creative coding exercises</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://testproject1.gdwithgd.com/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
 						</div>
 					</div>
-				</div>
-
-				<div class="unit-section" id="unit-1-styling-typography">
-					<h3><a href="#unit-1-styling-typography">Styling Typography</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								There’s not much you can do with just HTML. To start making your website pretty, we’ll need to use CSS. <strong>CSS (Cascading Style Sheets)</strong> is another programming language that works with HTML to style HTML elements.
-							</p>
-							<p>
-								CSS mainly uses two things: <strong>properties</strong> and <strong>classes</strong>. Properties define the different visual characteristics of HTML elements, while classes organize sets of properties so that you can apply all of them at once wherever you want. We can even embed CSS right into an HTML element’s opening tag!
-							</p>
-						</div>
-
-						<h4>Writing CSS</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/css/css_syntax.ASP" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>CSS Syntax</h5>
-								<p>The rules for writing CSS</p>
-							</a>
-							<a href="https://www.w3schools.com/css/css_comments.asp" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>CSS Comments</h5>
-								<p>Notes written within CSS</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;style&gt;</h5>
-								<p>Adding CSS to an HTML document</p>
-							</a>
-							<a href="https://www.w3schools.com/csSref/sel_class.php" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>CSS Classes</h5>
-								<p>Applying CSS to HTML elements</p>
-							</a>
-							<a href="https://www.w3schools.com/tags/att_style.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Attribute</div>
-								<h5>style="_"</h5>
-								<p>Inline CSS</p>
-							</a>
-						</div>
-
-						<h4>Demos</h4>
-						<div class="unit-links">
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-css" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>CSS Properties and Classes</h5>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-inline-css" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Inline CSS</h5>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-colors" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Color Codes</h5>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-inspect" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Using the Inspect Tool</h5>
-							</a>
-						</div>
-
-						<h4>CSS Properties for Typography</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/css/css_font_size.asp" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>font-size</h5>
-								<p>Font size</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>color</h5>
-								<p>Font color</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>text-align</h5>
-								<p>Text alignment</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>letter-spacing</h5>
-								<p>Letter spacing (tracking)</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>word-spacing</h5>
-								<p>Word spacing</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>line-height</h5>
-								<p>Line height (leading)</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>text-transform</h5>
-								<p>Forced capitalization</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>text-decoration</h5>
-								<p>Underline and similar decorations</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>text-shadow</h5>
-								<p>Drop shadow specifically for text</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>font-weight</h5>
-								<p>Boldness</p>
-							</a>
-							<a href="https://www.w3schools.com/css/css_font.asp" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>font-family</h5>
-								<p>Font/typeface</p>
-							</a>
-						</div>
+				
 					</div>
 				</div>
-
-				<div class="unit-section" id="unit-1-working-with-fonts">
-					<h3><a href="#unit-1-working-with-fonts">Working with Fonts</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								So far, we’ve worked exclusively with code. Part of being a designer though is picking the perfect font for your project. On the web, that’s a little more complicated than just downloading a font, but not by much.
-							</p>
-							<p>
-								In this section, we’ll cover what you need to know about web fonts. We’ll encounter our first <strong>CSS rule</strong>, which looks pretty similar to CSS classes. If you haven’t already, this would be a good time to set up a local coding environment by following the instructions on <a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank">Baby Steps</a>.
-							</p>
-						</div>
-
-						<h4>Where to Download Free Fonts</h4>
-						<div class="unit-links">
-							<a href="https://www.cssfontstack.com/" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>Web-safe Fonts</h5>
-								<p>Fonts that are available on (nearly) every computer</p>
-							</a>
-							<a href="https://fonts.google.com/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>Google Fonts</h5>
-								<p>Huge resource for open-source fonts</p>
-							</a>
-							<a href="https://velvetyne.fr/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>Velvetyne</h5>
-								<p>Open-source type foundry</p>
-							</a>
-							<a href="https://www.theleagueofmoveabletype.com/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>The League of Moveable Type</h5>
-								<p>Open-source type foundry</p>
-							</a>
-							<a href="https://uncut.wtf/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>UNCUT</h5>
-								<p>Open-source type foundry</p>
-							</a>
-							<a href="https://toomuchtype.com/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>Too Much Type</h5>
-								<p>Open-source type foundry (run by the people behind GD with GD!)</p>
-							</a>
-						</div>
-
-						<h4>Using Custom Fonts</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.php" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Rule</div>
-								<h5>@font-face</h5>
-								<p>Importing custom fonts</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>font-variation-settings</h5>
-								<p>Setting values for variable font axes</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>font-feature-settings</h5>
-								<p>Turning on or off OpenType features for your font</p>
-							</a>
-							<a href="https://fontgauntlet.com/" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>Font Gauntlet</h5>
-								<p>Tool for finding variable axis and OpenType feature names</p>
-							</a>
-						</div>
-
-						<h4>Demos</h4>
-						<div class="unit-links">
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-custom-fonts" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Custom Fonts</h5>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-variable-fonts" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Variable Fonts</h5>
-							</a>
+			
+				<div class="unit-section" id="unit-1-html-files">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-1-html-files">
+							<div class="unit-section-title-number">1.2</div>
+							<h3>HTML Files</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>A website is an HTML (or <strong>.html</strong>) file. What does that mean?</p><p>Code is just text stored in a file. We call this plaintext, because it doesn’t have any associated design (like font or color). Instead, it’s just text. The way we can tell programming languages apart is by their <strong>syntax</strong>, or their rules. HTML’s main rule is that we separate information by writing <strong>HTML elements</strong>.<p>This means that HTML doesn’t care that much about tabs, spaces, or line breaks. We’ll still use them, but mainly to organize our code. To get around this, we’ll need to use HTML elements.</p>
 						</div>
 					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-1-html-files-demos-and-exercises">
+						<a href="#unit-1-html-files-demos-and-exercises" class="unit-subsection-title"><h4>Demos and Exercises</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">A Basic HTML File</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-template" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">ascii-art.html</h5>
+							<p class="unit-subsection-resource-desc">Turn text into art!</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://testproject1.gdwithgd.com/#programmatic-poetry" target="_blank">Open exercise</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-html-files-concepts">
+						<a href="#unit-1-html-files-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">HTML (HyperText Markup Language)</h5>
+							<p class="unit-subsection-resource-desc">The main programming language for the web</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">HTML Elements</h5>
+							<p class="unit-subsection-resource-desc">A piece of content on a website (text, images, metadata, etc.)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Glossary/Element" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html_elements.asp" target="_blank">W3Schools</a>
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">All HTML elements</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">HTML Comments</h5>
+							<p class="unit-subsection-resource-desc">Notes written into an HTML file</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Comments" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html_comments.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-html-files-basic-html-elements">
+						<a href="#unit-1-html-files-basic-html-elements" class="unit-subsection-title"><h4>Basic HTML Elements</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;html&gt; <span>_</span> &lt;/html&gt;</h5>
+							<p class="unit-subsection-resource-desc">Contains your entire HTML document</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_html.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;head&gt; <span>_</span> &lt;/head&gt;</h5>
+							<p class="unit-subsection-resource-desc">Invisible metadata relating to your website</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html_head.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;meta&gt; <span>_</span> &lt;/meta&gt;</h5>
+							<p class="unit-subsection-resource-desc">Multi-use metadata element</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_meta.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;title&gt; <span>_</span> &lt;/title&gt;</h5>
+							<p class="unit-subsection-resource-desc">The title that appears in your browser tab</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;body&gt; <span>_</span> &lt;/body&gt;</h5>
+							<p class="unit-subsection-resource-desc">The visible content on your site</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_body.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;br&gt;</h5>
+							<p class="unit-subsection-resource-desc">Line breaks (no closing tag!)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_br.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;pre&gt; <span>_</span> &lt;/pre&gt;</h5>
+							<p class="unit-subsection-resource-desc">Preformatted text</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_pre.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
 				</div>
-			</div>
-		</section>
-	
-		<section class="resources-unit" style="--primary: var(--green)" data-color="green" id="unit-2">
-			<div class="resources-unit-title">
-				<div class="resources-unit-title-number">Unit 2</div>
-				<h2><a href="#unit-2">The Box Model</a></h2>
-				<p>
-					A well-known secret of the Internet is that everything is technically a box. Even though we have different HTML elements, each one is essentially a preset style for the same boxy content. Learning how those boxes work is the key to creating a great, easy-to-use website.
-				</p>
-				<p>
-					In this unit, we’ll dive deep into the so-called “box model” that governs HTML elements and learn how to start laying out our pages.
-				</p>
-			</div>
+			
+				<div class="unit-section" id="unit-1-typesetting-with-html">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-1-typesetting-with-html">
+							<div class="unit-section-title-number">1.3</div>
+							<h3>Typesetting with HTML</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>We can think of HTML as the <strong>content</strong> on your website. There are different kinds of content, but the most basic kind is text. HTML handles text via several dedicated HTML elements, from paragraphs to headings to lists and more. Each of these elements comes with its own set of default styles (which we will soon be able to override). For now, let’s make a website that actually says something!</p><p>Note: this is NOT a complete list of HTML elements! These are just the most common elements you’ll encounter for typography.</p>
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-1-typesetting-with-html-demos">
+						<a href="#unit-1-typesetting-with-html-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">HTML Elements for Typography</h5>
+							<p class="unit-subsection-resource-desc">Overview of typographic HTML elements</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-elements" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Typographic Hierarchy</h5>
+							<p class="unit-subsection-resource-desc">Example of how you might code a basic webpage</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-hierarchy" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-typesetting-with-html-concepts">
+						<a href="#unit-1-typesetting-with-html-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">HTML Attributes</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">HTML Entities</h5>
+							<p class="unit-subsection-resource-desc">Special codes for specific characters you can’t type otherwise (like the &lt; symbol)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Glossary/Character_reference" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html_entities.asp" target="_blank">W3Schools</a>
+						
+							<a href="https://www.toptal.com/designers/htmlarrows/symbols/" target="_blank">All HTML entities</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">HTML Text Fundamentals</h5>
+							<p class="unit-subsection-resource-desc">Deep dive into typography on the web</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-typesetting-with-html-typographic-html-elements">
+						<a href="#unit-1-typesetting-with-html-typographic-html-elements" class="unit-subsection-title"><h4>Typographic HTML Elements</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;p&gt; <span>_</span> &lt;/p&gt;</h5>
+							<p class="unit-subsection-resource-desc">Paragraphs</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;h1&gt; <span>_</span> &lt;/h1&gt;</h5>
+							<p class="unit-subsection-resource-desc">Headings (&lt;h1&gt;-&lt;h6&gt;)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/htmL/html_headings.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;ul&gt; <span>_</span> &lt;/ul&gt;</h5>
+							<p class="unit-subsection-resource-desc">Unordered (bulleted) lists</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_ul.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;ol&gt; <span>_</span> &lt;/ol&gt;</h5>
+							<p class="unit-subsection-resource-desc">Ordered (numbered) lists</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_ol.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;li&gt; <span>_</span> &lt;/li&gt;</h5>
+							<p class="unit-subsection-resource-desc">List items</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_li.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;strong&gt; <span>_</span> &lt;/strong&gt;</h5>
+							<p class="unit-subsection-resource-desc">Bold (important) text</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_strong.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;em&gt; <span>_</span> &lt;/em&gt;</h5>
+							<p class="unit-subsection-resource-desc">Italic (emphasized) text</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_em.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;sup&gt; <span>_</span> &lt;/sup&gt;</h5>
+							<p class="unit-subsection-resource-desc">Superscript</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_sup.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;sub&gt; <span>_</span> &lt;/sub&gt;</h5>
+							<p class="unit-subsection-resource-desc">Subscript</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_sub.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;a href="<span>url.com</span>"&gt; <span>_</span> &lt;/a&gt;</h5>
+							<p class="unit-subsection-resource-desc">Links</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;table&gt; <span>_</span> &lt;/table&gt;</h5>
+							<p class="unit-subsection-resource-desc">Tables (and other related elements)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-1-styling-text-with-css">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-1-styling-text-with-css">
+							<div class="unit-section-title-number">1.4</div>
+							<h3>Styling Text with CSS</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>There’s not much you can do with just HTML. To start making your website pretty, we’ll need to use CSS. <strong>CSS (Cascading Style Sheets)</strong> is another programming language that works with HTML to style HTML elements.</p><p>CSS mainly uses two things: <strong>properties</strong> and <strong>classes</strong>. Properties define the different visual characteristics of HTML elements, while classes organize sets of properties so that you can apply all of them at once wherever you want. We can even embed CSS right into an HTML element’s opening tag!</p>
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-1-styling-text-with-css-demos">
+						<a href="#unit-1-styling-text-with-css-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Properties and Classes</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-css" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Inline CSS</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-inline-css" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Color Codes</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-colors" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Using the Inspect Tool</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-inspect" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-styling-text-with-css-concepts">
+						<a href="#unit-1-styling-text-with-css-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Syntax</h5>
+							<p class="unit-subsection-resource-desc">The rules for writing CSS</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_syntax.ASP" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Comments</h5>
+							<p class="unit-subsection-resource-desc">Notes written within CSS</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Comments" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_comments.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Specificity</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_specificity.asp" target="_blank">W3Schools</a>
+						
+							<a href="https://specificity.keegan.st/" target="_blank">Specificity Calculator</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Units</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css_units.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Colors</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_colors.asp" target="_blank">W3Schools</a>
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color" target="_blank">Named CSS Colors</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-styling-text-with-css-undefined">
+						<a href="#unit-1-styling-text-with-css-undefined" class="unit-subsection-title"><h4>Adding CSS to HTML Elements</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;style&gt; <span>_</span> &lt;/style&gt;</h5>
+							<p class="unit-subsection-resource-desc">Element for writing CSS in an HTML document</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank">W3Schools</a>
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">All HTML elements</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">.class-name { <span>color: red; font-size: 12px;</span> }</h5>
+							<p class="unit-subsection-resource-desc">CSS classes (applying CSS to multiple HTML elements)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/csSref/sel_class.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">style="<span>color: red; font-size: 12px;</span>"</h5>
+							<p class="unit-subsection-resource-desc">Inline CSS (applying CSS to a single HTML element)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/att_style.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;span&gt; <span>_</span> &lt;/span&gt;</h5>
+							<p class="unit-subsection-resource-desc">Inline text element (for adding CSS to specific words)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_span.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-styling-text-with-css-css-properties-for-typography">
+						<a href="#unit-1-styling-text-with-css-css-properties-for-typography" class="unit-subsection-title"><h4>CSS Properties for Typography</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">font-size: <span>24px;</span></h5>
+							<p class="unit-subsection-resource-desc">Font size</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_font_size.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">color: <span>rgb(255,0,0);</span></h5>
+							<p class="unit-subsection-resource-desc">Font color</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_text_color.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">text-align: <span>center;</span></h5>
+							<p class="unit-subsection-resource-desc">Text alignment</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_text_text-align.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">letter-spacing: <span>.02em;</span></h5>
+							<p class="unit-subsection-resource-desc">Letter spacing (tracking)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_text_letter-spacing.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">word-spacing: <span>.5em;</span></h5>
+							<p class="unit-subsection-resource-desc">Word spacing</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_text_word-spacing.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">line-height: <span>1.4em;</span></h5>
+							<p class="unit-subsection-resource-desc">Line height (leading)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_dim_line-height.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">text-transform: <span>uppercase;</span></h5>
+							<p class="unit-subsection-resource-desc">Forced capitalization</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_text_text-transform.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">text-decoration: <span>1px green wavy underline;</span></h5>
+							<p class="unit-subsection-resource-desc">Underline and similar decorations</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_text_text-decoration.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">text-underline-offset: <span>.2em;</span></h5>
+							<p class="unit-subsection-resource-desc">Gap between text and underline</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_text-underline-offset.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">text-shadow: <span>5px 5px 10px rgba(0,0,0,.5);</span></h5>
+							<p class="unit-subsection-resource-desc">Drop shadow specifically for text</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_text-shadow.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">font-weight: <span>bold;</span></h5>
+							<p class="unit-subsection-resource-desc">Boldness</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_font_weight.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">font-family: <span>sans-serif;</span></h5>
+							<p class="unit-subsection-resource-desc">Font/typeface</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_font_font-family.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-1-launching-a-website">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-1-launching-a-website">
+							<div class="unit-section-title-number">1.5</div>
+							<h3>Launching a Website</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>Coming soon!</p>
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-1-launching-a-website-tutorials">
+						<a href="#unit-1-launching-a-website-tutorials" class="unit-subsection-title"><h4>Tutorials</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Baby Steps</h5>
+							<p class="unit-subsection-resource-desc">Everything you need to know to launch a website</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://babysteps.gdwithgd.com/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-launching-a-website-concepts">
+						<a href="#unit-1-launching-a-website-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">HTML File Paths</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.w3schools.com/html/html_filepaths.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">External CSS</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.w3schools.com/css/css_external.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-1-web-fonts">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-1-web-fonts">
+							<div class="unit-section-title-number">1.6</div>
+							<h3>Web Fonts</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>Coming soon!</p>
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-1-web-fonts-demos">
+						<a href="#unit-1-web-fonts-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Custom Fonts</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-custom-fonts" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Variable Fonts</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=typography-variable-fonts" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-web-fonts-concepts">
+						<a href="#unit-1-web-fonts-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Web-safe Fonts</h5>
+							<p class="unit-subsection-resource-desc">Fonts that are available on (nearly) every computer</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.cssfontstack.com/" target="_blank">See list</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-web-fonts-importing-custom-fonts-with-css">
+						<a href="#unit-1-web-fonts-importing-custom-fonts-with-css" class="unit-subsection-title"><h4>Importing Custom Fonts with CSS</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">@font-face { <span>_</span> }</h5>
+							<p class="unit-subsection-resource-desc">Importing custom fonts via CSS</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">font-weight: <span>500;</span></h5>
+							<p class="unit-subsection-resource-desc">Specify a font’s weight (or range of weights for variable fonts, e.g. 100 900)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_font_weight.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">font-style: <span>italic;</span></h5>
+							<p class="unit-subsection-resource-desc">Specify a font’s style</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_font_style.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">font-variation-settings: <span>"wght" 500, "SRFF" 0;</span></h5>
+							<p class="unit-subsection-resource-desc">Setting values for variable font axes</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">font-feature-settings: <span>"wght" 500, "SRFF" 0;</span></h5>
+							<p class="unit-subsection-resource-desc">Turning on or off OpenType features for your font</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_font-feature-settings.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-1-web-fonts-places-to-download-free-fonts">
+						<a href="#unit-1-web-fonts-places-to-download-free-fonts" class="unit-subsection-title"><h4>Places to Download Free Fonts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Google Fonts</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="Thttps://fonts.google.com/ODO" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Too Much Type</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://toomuchtype.com/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+					</div>
+				</section>
 
-			<div class="resources-unit-content">
+				<section class="unit" style="--primary: var(--green)" data-color="green" id="unit-2">
+					<div class="unit-heading">
+						<a href="#unit-2" class="unit-heading-title">
+							<div class="unit-heading-title-number">Unit 2</div>
+							<h2 class="unit-heading-title-name">The Box Model</h2>
+						</a>
+						<div class="unit-heading-desc">
+							<p>
+								On the Internet, everything is a box. Even though we have different HTML elements, each one is essentially a preset style for the same boxy element. And each boxy element shares the same CSS properties, which together form the “CSS box model.”
+							</p>
+							<p>
+								By learning how the box model works, you’ll have the power to move beyond typography and begin laying out your page graphically.
+							</p>
+						</div>
+					</div>
+
+					<div class="unit-content">
+						
 				<div class="unit-section" id="unit-2-basics-of-the-box-model">
-					<h3><a href="#unit-2-basics-of-the-box-model">Basics of the Box Model</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								What does it mean that every HTML element is a box? It means that every HTML shares similar properties about how it gets arranged on a page. Elements are just rectangles in other rectangles, and we can use CSS to control the size and positioning of these shapes.
-							</p>
-						</div>
-
-						<h4>Concepts</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>The Box Model</h5>
-								<p>What it is and related CSS properties</p>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-basics" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Basics of the Box Model</h5>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-units" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Units</h5>
-							</a>
-							<a href="https://www.w3schools.com/cssref/css_units.php" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>CSS Units</h5>
-								<p>How to define the size of certain CSS properties</p>
-							</a>
-						</div>
-
-						<h4>Dimensions</h4>
-						<div class="unit-links">
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>width</h5>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-width" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>min-width</h5>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>max-width</h5>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>height</h5>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-height" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>min-height</h5>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-height" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>max-height</h5>
-							</a>
-						</div>
-
-						<h4>Spacing</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>margin</h5>
-								<p>Space outside an element</p>
-							</a>
-							<a href="https://www.w3schools.com/css/css_padding.asp" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>padding</h5>
-								<p>Space inside an element</p>
-							</a>
-							<a href="https://www.w3schools.com/css/css_border.asp" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>border</h5>
-								<p>Line between an element’s margin and padding (shortcut for border-width, border-style, and border-color)</p>
-							</a>
-							<a href="https://www.w3schools.com/css/css_outline.asp" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>outline</h5>
-								<p>A secondary border, but outside of an element’s normal border not included in its width or height</p>
-							</a>
-						</div>
-
-						<h4>Styling Boxes</h4>
-						<div class="unit-links">
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>background-color</h5>
-							</a>
-							<a href="https://www.w3schools.com/cssref/pr_background-image.php" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>background-image</h5>
-								<p>Set an image or gradient to be an element’s background</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>background-size</h5>
-								<p>How a background image or gradient fills the element</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>background-repeat</h5>
-								<p>Whether a background image or gradient tiles infinitely</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>background-position</h5>
-								<p>Where a background image or gradient sits</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>border-radius</h5>
-								<p>Rounded corners</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>box-shadow</h5>
-								<p>Drop shadow for an entire element</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>opacity</h5>
-								<p>Transparency</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>transform</h5>
-								<p>Change certain visual properties of an HTML element</p>
-							</a>
-						</div>
-
-						<h4>Setting Better Defaults</h4>
-						<div class="unit-links">
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>box-sizing</h5>
-								<p>Whether the padding and border gets included in an element’s width and height</p>
-							</a>
-							<a href="https://www.w3schools.com/cssref/sel_all.php" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Selector</div>
-								<h5>*</h5>
-								<p>Apply CSS properties to every element on a page</p>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-box-sizing" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Box Sizing</h5>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-css-overrides" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>CSS Overrides</h5>
-							</a>
-							<a href="https://www.w3schools.com/cssref/css_default_values.php" target="_blank">
-								<div><span class="symbol">&#xe157;</span> Resource</div>
-								<h5>Default CSS Properties</h5>
-							</a>
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-2-basics-of-the-box-model">
+							<div class="unit-section-title-number">2.1</div>
+							<h3>Basics of the Box Model</h3>
+						</a>
+						<div class="unit-section-info">
+							Coming soon!
 						</div>
 					</div>
-				</div>
-
-				<div class="unit-section" id="unit-2-block-and-inline-elements">
-					<h3><a href="#unit-2-block-and-inline-elements">Block and Inline Elements</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								Most elements take up the full width of the screen. Sometimes, we want elements to be side-by-side though. While we’ll learn a bunch of ways to achieve that in Unit 3, for now it’s at least worth knowing the two basic kinds of element sizing structures: <strong>block</strong> and <strong>inline</strong> elements.
-							</p>
-						</div>
-
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank">
-								<div><span class="symbol">&#xe88a;</span> Concept</div>
-								<h5>Block vs. Inline Elements</h5>
-								<p>Includes a list of all related elements</p>
-							</a>
-							<a href="https://www.w3schools.com/cssref/pr_class_display.php" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>display</h5>
-								<p>Set how an element gets sized (block, inline, inline-block, or none)</p>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-display" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Using the “display” Property</h5>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="unit-section" id="unit-2-beyond-typography">
-					<h3><a href="#unit-2-beyond-typography">Beyond Typography</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								Designer’s obviously use more than just typography. Not everything in our world is a paragraph! For cases when text just isn’t enough, we have a couple new HTML element friends to help us out. The most important of these elements is the <strong>div</strong>, which is a generic element that can do whatever you need it to. It can even group other elements together!
-							</p>
-						</div>
+					<div class="unit-subsections">
 						
-						<h4>Divs</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/tags/tag_div.ASP" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;div&gt;</h5>
-								<p>Generic block-level element</p>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-divs" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Working with Divs</h5>
-							</a>
-						</div>
+					<div class="unit-subsection" id="unit-2-basics-of-the-box-model-demos">
+						<a href="#unit-2-basics-of-the-box-model-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Basics of the Box Model</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-basics" target="_blank">Open demo</a>
 						
-						<h4>Organizing Your HTML Document</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>Semantic HTML Elements</h5>
-								<p>Elements that work just like &lt;div&gt; but indicate specific kinds of content</p>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-grouping" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Grouping Elements</h5>
-							</a>
-							<a href="https://www.w3schools.com/html/html_id.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Attribute</div>
-								<h5>id="_"</h5>
-								<p>Unique identifier for HTML elements</p>
-							</a>
-							<a href="https://www.w3schools.com/cssref/pr_scroll-behavior.php" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>scroll-behavior</h5>
-								<p>Smooth scrolling</p>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-anchor-links" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Anchor Links and IDs</h5>
-							</a>
+							</div>
 						</div>
-
-						<h4>Images</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">
-								<div><span class="symbol">&#xe86f;</span> HTML Element</div>
-								<h5>&lt;img&gt;</h5>
-								<p>Images (no closing tag!)</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>object-fit</h5>
-								<p>How an image fits its element</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>object-position</h5>
-								<p>Where an image is positioned inside its element</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>mix-blend-mode</h5>
-								<p>How an image blends into the background (works on any element!)</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>filter</h5>
-								<p>Alter the look of an image (works on any element!)</p>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-images" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Responsive Images</h5>
-							</a>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Units</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-units" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
 						</div>
 					</div>
+				
+					<div class="unit-subsection" id="unit-2-basics-of-the-box-model-concepts">
+						<a href="#unit-2-basics-of-the-box-model-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">The Box Model</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Units</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css_units.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-basics-of-the-box-model-css-properties-for-sizing">
+						<a href="#unit-2-basics-of-the-box-model-css-properties-for-sizing" class="unit-subsection-title"><h4>CSS Properties for Sizing</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">width: <span>50%;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_dim_width.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">min-width: <span>100px;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-width" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_dim_min-width.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">max-width: <span>1200px;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-width" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_dim_max-width.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">height: <span>100vh;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_dim_height.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">min-height: <span>2em;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min-height" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_dim_min-height.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">max-height: <span>600px;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max-height" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_dim_max-height.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">aspect-ratio: <span>1 / 1;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css_pr_aspect-ratio.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-basics-of-the-box-model-css-properties-for-spacing">
+						<a href="#unit-2-basics-of-the-box-model-css-properties-for-spacing" class="unit-subsection-title"><h4>CSS Properties for Spacing</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">margin: <span>0 auto;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_margin.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">padding: <span>10px 20px 30px 40px;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_padding.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">border: <span>1px solid black;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_border.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">outline: <span>1px solid black;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_outline.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">outline-offset: <span>20px;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_outline_offset.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-basics-of-the-box-model-css-properties-for-styling-boxes">
+						<a href="#unit-2-basics-of-the-box-model-css-properties-for-styling-boxes" class="unit-subsection-title"><h4>CSS Properties for Styling Boxes</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">border-radius: <span>10px;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_border-radius.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">background-color: <span>red;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.w3schools.com/cssref/pr_background-color.php" target="_blank">MDN</a>
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">box-shadow: <span>10px 10px 20px rgba(0,0,0,.5);</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_box-shadow.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">opacity: <span>.5;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_opacity.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">transform: <span>scale(2) rotate(10deg);</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_transform.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
 				</div>
+			
+				<div class="unit-section" id="unit-2-box-sizing">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-2-box-sizing">
+							<div class="unit-section-title-number">2.2</div>
+							<h3>Box Sizing</h3>
+						</a>
+						<div class="unit-section-info">
+							Coming soon!
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-2-box-sizing-demos">
+						<a href="#unit-2-box-sizing-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Box Sizing</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-box-sizing" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-box-sizing-concepts">
+						<a href="#unit-2-box-sizing-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">box-sizing: <span>border-box;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css3_box-sizing.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-box-sizing-overriding-default-css-properties">
+						<a href="#unit-2-box-sizing-overriding-default-css-properties" class="unit-subsection-title"><h4>Overriding Default CSS Properties</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">* { <span>_</span> }</h5>
+							<p class="unit-subsection-resource-desc">Universal selector (apply CSS to every HTML element</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/sel_all.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Default CSS Properties</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.w3schools.com/cssref/css_default_values.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-2-inline-vs-block-elements">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-2-inline-vs-block-elements">
+							<div class="unit-section-title-number">2.3</div>
+							<h3>Inline vs. Block Elements</h3>
+						</a>
+						<div class="unit-section-info">
+							Coming soon!
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-2-inline-vs-block-elements-demos">
+						<a href="#unit-2-inline-vs-block-elements-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Using the “display” property</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-display" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Working with Divs</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-divs" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-inline-vs-block-elements-concepts">
+						<a href="#unit-2-inline-vs-block-elements-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Inline vs. Block Elements</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-inline-vs-block-elements-html-elements">
+						<a href="#unit-2-inline-vs-block-elements-html-elements" class="unit-subsection-title"><h4>HTML Elements</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;div&gt; <span>_</span> &lt;/div&gt;</h5>
+							<p class="unit-subsection-resource-desc">Generic block element</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_div.ASP" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;span&gt; <span>_</span> &lt;/span&gt;</h5>
+							<p class="unit-subsection-resource-desc">Generic inline element</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_span.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-inline-vs-block-elements-css-properties">
+						<a href="#unit-2-inline-vs-block-elements-css-properties" class="unit-subsection-title"><h4>CSS Properties</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">display: block;</h5>
+							<p class="unit-subsection-resource-desc">Set an element to block, inline, inline-block, or none (we’ll have more options later!)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.w3schools.com/cssref/pr_class_display.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">overflow: <span>scroll;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_overflow.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-2-images">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-2-images">
+							<div class="unit-section-title-number">2.4</div>
+							<h3>Images</h3>
+						</a>
+						<div class="unit-section-info">
+							Coming soon!
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-2-images-demos">
+						<a href="#unit-2-images-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Responsive Images</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-images" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-images-html-elements">
+						<a href="#unit-2-images-html-elements" class="unit-subsection-title"><h4>HTML Elements</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;img src="<span>url or file path</span>"&gt;</h5>
+							<p class="unit-subsection-resource-desc">Images (no closing tag!)</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-images-css-properties-for-styling-images">
+						<a href="#unit-2-images-css-properties-for-styling-images" class="unit-subsection-title"><h4>CSS Properties for Styling Images</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">object-fit: <span>cover;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css3_object-fit.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">object-position: <span>center;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css3_object-position.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">filter: <span>invert(100%) blur(2px);</span></h5>
+							<p class="unit-subsection-resource-desc">Works on any element!</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_filter.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">mix-blend-mode: <span>overlay;</span></h5>
+							<p class="unit-subsection-resource-desc">Works on any element!</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_mix-blend-mode.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-images-adding-images-using-css">
+						<a href="#unit-2-images-adding-images-using-css" class="unit-subsection-title"><h4>Adding Images Using CSS</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">background-image: url("<span>url or file path</span>")<span>;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_background-image.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">background-size: <span>cover;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_background-size.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">background-repeat: <span>no-repeat;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_background-repeat.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">background-position: <span>center;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_background-position.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-2-laying-out-an-article">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-2-laying-out-an-article">
+							<div class="unit-section-title-number">2.5</div>
+							<h3>Laying Out an Article</h3>
+						</a>
+						<div class="unit-section-info">
+							Coming soon!
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-2-laying-out-an-article-demos">
+						<a href="#unit-2-laying-out-an-article-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Grouping Elements</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-grouping" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Anchor Links and IDs</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-anchor-links" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-laying-out-an-article-concepts">
+						<a href="#unit-2-laying-out-an-article-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Semantic HTML Elements</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantic_elements" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-laying-out-an-article-anchor-links">
+						<a href="#unit-2-laying-out-an-article-anchor-links" class="unit-subsection-title"><h4>Anchor Links</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;a href="#<span>section-name</span>"&gt; <span>_</span> &lt;/a&gt;</h5>
+							<p class="unit-subsection-resource-desc">Anchor link element</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">id="<span>section-name</span>"</h5>
+							<p class="unit-subsection-resource-desc">HTML element ID attribute</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/html/html_id.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">scroll-behavior: smooth;</h5>
+							<p class="unit-subsection-resource-desc">CSS property for smoothly scrolling when clicking an anchor link</p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_scroll-behavior.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-laying-out-an-article-semantic-html-elements">
+						<a href="#unit-2-laying-out-an-article-semantic-html-elements" class="unit-subsection-title"><h4>Semantic HTML Elements</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;header&gt; <span>_</span> &lt;/header&gt</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_header.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;nav&gt; <span>_</span> &lt;/nav&gt</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_nav.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;main&gt; <span>_</span> &lt;/main&gt</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_main.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;section&gt; <span>_</span> &lt;/section&gt</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_section.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;footer&gt; <span>_</span> &lt;/footer&gt</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_footer.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;figure&gt; <span>_</span> &lt;/figure&gt</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_figure.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">&lt;figcaption&gt; <span>_</span> &lt;/figcaption&gt</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/tags/tag_figcaption.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-2-hover-and-active-states">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-2-hover-and-active-states">
+							<div class="unit-section-title-number">2.6</div>
+							<h3>:hover and :active States</h3>
+						</a>
+						<div class="unit-section-info">
+							Coming soon!
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-2-hover-and-active-states-demos">
+						<a href="#unit-2-hover-and-active-states-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Hover and Active States</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-hover-states" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-hover-and-active-states-concepts">
+						<a href="#unit-2-hover-and-active-states-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Pseudo-classes</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-hover-and-active-states-adding-hover-states-with-css">
+						<a href="#unit-2-hover-and-active-states-adding-hover-states-with-css" class="unit-subsection-title"><h4>Adding Hover States with CSS</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">:hover { <span>_</span> }</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/sel_hover.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">:active { <span>_</span> }</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/sel_active.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">transition: <span>1s;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">transition-timing-function: <span>linear;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_transition-timing-function.php" target="_blank">W3Schools</a>
+						
+							<a href="https://easings.net/" target="_blank">Easing Functions</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">cursor: <span>pointer;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_class_cursor.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-2-keyframes-animations">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-2-keyframes-animations">
+							<div class="unit-section-title-number">2.7</div>
+							<h3>@keyframes Animations</h3>
+						</a>
+						<div class="unit-section-info">
+							Coming soon!
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-2-keyframes-animations-demos">
+						<a href="#unit-2-keyframes-animations-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">@keyframes Animations</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-2-keyframes-animations-creating-animations-with-css">
+						<a href="#unit-2-keyframes-animations-creating-animations-with-css" class="unit-subsection-title"><h4>Creating Animations with CSS</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">@keyframes <span>my-animation</span> { <span>_</span> }</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">animation-name: <span>my-animation;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_animation-name.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">animation-duration: <span>5s;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/CSSref/css3_pr_animation-duration.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">animation-delay: <span>-1s;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_animation-delay.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">animation-iteration-count: <span>infinite;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_animation-iteration-count.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">animation-direction: <span>alternate;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_animation-direction.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">animation-timing-function: <span>ease-in-out;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_animation-timing-function.php" target="_blank">W3Schools</a>
+						
+							<a href="https://easings.net/" target="_blank">Timing Functions</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">animation-fill-mode: <span>forwards;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_animation-fill-mode.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">animation: <span>my-animation 5s -1s infinite alternate ease-in-out forwards;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">animation-play-state: <span>paused;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_animation-play-state.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+					</div>
+				</section>
 
-				<div class="unit-section" id="unit-2-basic-interaction-and-animation">
-					<h3><a href="#unit-2-basic-interaction-and-animation">Basic Interaction and Animation</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
+				<section class="unit" style="--primary: var(--blue);" data-color="blue" id="unit-3">
+					<div class="unit-heading">
+						<a href="#unit-3" class="unit-heading-title">
+							<div class="unit-heading-title-number">Unit 3</div>
+							<h2 class="unit-heading-title-name">Layout</h2>
+						</a>
+						<div class="unit-heading-desc">
 							<p>
-								So far, we’ve seen how websites are different from other mediums in terms of how they lay out information. We haven’t yet explored what websites can do that other mediums can’t. Specifically, websites have the ability to be both dynamic and interactive. We’ll continue to learn more ways to make websites both of these things, but we can get started with the most basic kinds of interactivity: hovering and clicking.
+								Websites are vertical — as you add content, your page gets taller. That works great for basic articles, but what about non-vertical layouts? Help!
+							</p>
+							<p>
+								The need for more complicated web layouts arose, so CSS evolved to meet these needs. It became capable of changing depending on your screen size. On top of that, designers gained two brand new ways to lay out content: in two-dimensional grids, and a quirky little thing called flexbox.
 							</p>
 						</div>
+					</div>
 
-						<h4>Interaction</h4>
-						<div class="unit-links">
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-hover-states" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Hover and Active States</h5>
-								<p>Basic mouse interaction with HTML elements</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Pseudo-Class</div>
-								<h5>:hover</h5>
-								<p>Hover state</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:active" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Pseudo-Class</div>
-								<h5>:active</h5>
-								<p>Pressed state</p>
-							</a>
-							<a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>transition</h5>
-								<p>Animating between normal, hover, and active/pressed states</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>cursor</h5>
-								<p>Mouse cursor when hovering over an element</p>
-							</a>
-						</div>
-
-						<h4>Animation</h4>
-						<div class="unit-links">
-							<a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>CSS Animations</h5>
-								<p>Overview</p>
-							</a>
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-keyframes" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>@keyframes Animations</h5>
-							</a>
-							<a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Rule</div>
-								<h5>@keyframes</h5>
-								<p>Define the keyframes for a CSS animation</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">
-								<div><span class="symbol">&#xe8f4;</span> CSS Property</div>
-								<h5>animation</h5>
-								<p>Shorthand for all related CSS animation properties</p>
-							</a>
+					<div class="unit-content">
+						
+				<div class="unit-section" id="unit-3-media-queries">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-3-media-queries">
+							<div class="unit-section-title-number">3.1</div>
+							<h3>Media Queries</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>What does it mean for a website to be <strong>responsive</strong>? For starters, it means that no matter your screen size, the site should adjust its layout keep a good user experience.</p>
 						</div>
 					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-3-media-queries-demos">
+						<a href="#unit-3-media-queries-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Media Queries</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.w3schools.com/css/css3_mediaqueries.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Typical Device Breakpoints</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
 				</div>
-
-				<div class="unit-section" id="unit-2-advanced-css-selectors">
-					<h3><a href="#unit-2-advanced-css-selectors">Advanced CSS Selectors</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
+			
+				<div class="unit-section" id="unit-3-css-grid">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-3-css-grid">
+							<div class="unit-section-title-number">3.2</div>
+							<h3>CSS Grid</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>Coming soon!</p>
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-3-css-grid-demos">
+						<a href="#unit-3-css-grid-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-3-css-grid-concepts">
+						<a href="#unit-3-css-grid-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Grid</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/CSS/css_grid.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-3-css-grid-tutorials">
+						<a href="#unit-3-css-grid-tutorials" class="unit-subsection-title"><h4>Tutorials</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Grid Garden</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://cssgridgarden.com/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">An Interactive Guide to CSS Grid</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.joshwcomeau.com/css/interactive-guide-to-grid/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Grid Layout Guide</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-3-css-grid-css-properties-for-grid-parents">
+						<a href="#unit-3-css-grid-css-properties-for-grid-parents" class="unit-subsection-title"><h4>CSS Properties for Grid Parents</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">display: grid;</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">grid-template-columns: <span>1fr 2fr 1fr;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">grid-template-rows: <span>repeat(3, 1fr);</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">grid-auto-flow: <span>row;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">gap: <span>10px 20px;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_gap.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">grid-auto-columns: <span>1fr;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_grid-auto-columns.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">grid-auto-rows: <span>1fr;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_grid-auto-rows.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">grid-template-areas: <span>"a b c";</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/pr_grid-template-areas.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-3-css-grid-css-properties-for-grid-children">
+						<a href="#unit-3-css-grid-css-properties-for-grid-children" class="unit-subsection-title"><h4>CSS Properties for Grid Children</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">grid-column: <span>span 2;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">grid-row: <span>1 / 3;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">grid-area: <span>"a";</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">align-self: <span>stretch;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">justify-self: <span>end;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-3-flexbox">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-3-flexbox">
+							<div class="unit-section-title-number">3.3</div>
+							<h3>Flexbox</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>Coming soon!</p>
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-3-flexbox-demos">
+						<a href="#unit-3-flexbox-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-3-flexbox-concepts">
+						<a href="#unit-3-flexbox-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Flexbox</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-3-flexbox-tutorials">
+						<a href="#unit-3-flexbox-tutorials" class="unit-subsection-title"><h4>Tutorials</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Flexbox Froggy</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://flexboxfroggy.com/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">An Interactive Guide to Flexbox</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Flexbox Layout Guide</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Visit site</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-3-flexbox-css-properties-for-flexbox-parents">
+						<a href="#unit-3-flexbox-css-properties-for-flexbox-parents" class="unit-subsection-title"><h4>CSS Properties for Flexbox Parents</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">display: flex;</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">flex-direction: <span>column;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_flex-direction.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">flex-wrap: <span>wrap;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/CSSref/css3_pr_flex-wrap.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">gap: <span>10px 20px;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_gap.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">align-items: <span>center;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_align-items.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">justify-content: <span>center;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_justify-content.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-3-flexbox-css-properties-for-flexbox-children">
+						<a href="#unit-3-flexbox-css-properties-for-flexbox-children" class="unit-subsection-title"><h4>CSS Properties for Flexbox Children</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">flex-grow: <span>1;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_flex-grow.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">flex-shrink: <span>0;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_flex-shrink.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">flex-basis: <span>auto;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css3_pr_flex-basis.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">align-self: <span>stretch;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">justify-self: <span>end;</span></h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self" target="_blank">MDN</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-3-advanced-css-selectors">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-3-advanced-css-selectors">
+							<div class="unit-section-title-number">3.4</div>
+							<h3>Advanced CSS Selectors</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>Coming soon!</p>
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-3-advanced-css-selectors-demos">
+						<a href="#unit-3-advanced-css-selectors-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">Nested CSS Selectors</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-nested-selectors" target="_blank">Open demo</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					<div class="unit-subsection" id="unit-3-advanced-css-selectors-concepts">
+						<a href="#unit-3-advanced-css-selectors-concepts" class="unit-subsection-title"><h4>Concepts</h4></a>
+						<div class="unit-subsection-resources">
+							
+						<div class="unit-subsection-resource">
+							<h5 class="unit-subsection-resource-heading">CSS Selectors</h5>
+							<p class="unit-subsection-resource-desc"></p>
+							<div class="unit-subsection-resource-links">
+								
+							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors" target="_blank">MDN</a>
+						
+							<a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank">W3Schools</a>
+						
+							</div>
+						</div>
+					
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+				<div class="unit-section" id="unit-3-putting-it-all-together">
+					<div class="unit-section-heading">
+						<a class="unit-section-title" href="#unit-3-putting-it-all-together">
+							<div class="unit-section-title-number">3.5</div>
+							<h3>Putting It All Together</h3>
+						</a>
+						<div class="unit-section-info">
+							<p>Coming soon!</p>
+						</div>
+					</div>
+					<div class="unit-subsections">
+						
+					<div class="unit-subsection" id="unit-3-putting-it-all-together-demos">
+						<a href="#unit-3-putting-it-all-together-demos" class="unit-subsection-title"><h4>Demos</h4></a>
+						<div class="unit-subsection-resources">
+							
+						</div>
+					</div>
+				
+					</div>
+				</div>
+			
+					</div>
+				</section>
+			
+				<section class="unit" style="--primary: var(--yellow);" data-color="yellow" id="unit-4">
+					<div class="unit-heading">
+						<a href="#unit-4" class="unit-heading-title">
+							<div class="unit-heading-title-number">Unit 4</div>
+							<h2 class="unit-heading-title-name">Interaction</h2>
+						</a>
+						<div class="unit-heading-desc">
 							<p>
-								With what we know so far, we can start making some unique digital experiences. The only problem is that these experiences are pretty simple. If we want to amp things up a bit, we can employ the help of new <strong>CSS selectors</strong> to give our websites more depth.
+								Once you’re comfortable with HTML and CSS, you might find yourself asking a question: is this really all a website can do? Organize and present information?
+							</p>
+							<p>
+								Of course not! Websites are incredible not just because they give us information, but because they also make that information <em>interactive</em>. Unfortunately for us developers, that means we’re going to have to learn yet another language, namely JavaScript. Get ready for something a little different!
 							</p>
 						</div>
+					</div>
 
-						<h4>Links</h4>
-						<div class="unit-links">
-							<a href="https://demoland.gdwithgd.com/editor/?collection=designers-guide-to-web-programming&demo=box-model-nested-selectors" target="_blank">
-								<div><span class="symbol">&#xe3c9;</span> Demo</div>
-								<h5>Nested CSS Selectors</h5>
-							</a>
-							<a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>CSS Selectors (W3Schools)</h5>
-								<p>A list of common CSS selectors</p>
-							</a>
-							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors" target="_blank">
-								<div><span class="symbol">&#xe0e0;</span> Concept</div>
-								<h5>CSS Selectors (MDN)</h5>
-								<p>A more up-to-date list of CSS selectors</p>
-							</a>
+					<div class="unit-content">
+						
+					</div>
+				</section>
+			
+				<section class="unit" style="--primary: var(--purple);" data-color="purple" id="unit-5">
+					<div class="unit-heading">
+						<a href="#unit-5" class="unit-heading-title">
+							<div class="unit-heading-title-number">Unit 5</div>
+							<h2 class="unit-heading-title-name">Loops</h2>
+						</a>
+						<div class="unit-heading-desc">
+							<p>
+								JavaScript is pretty darn powerful. Not only can we use it to make websites interactive, we can use JavaScript to make things happen on their own! To leverage this kind of power, we need to learn about a fundamental concept of computer science: loops.
+							</p>
+							<p>
+								In this section, we’ll use loops to automate repetitive tasks and make full use of the web medium.
+							</p>
 						</div>
 					</div>
-				</div>
-			</div>
-		</section>
+
+					<div class="unit-content">
+						
+					</div>
+				</section>
+			
+				<section class="unit" style="--primary: var(--red);" data-color="red" id="unit-6">
+					<div class="unit-heading">
+						<a href="#unit-6" class="unit-heading-title">
+							<div class="unit-heading-title-number">Unit 5</div>
+							<h2 class="unit-heading-title-name">Data</h2>
+						</a>
+						<div class="unit-heading-desc">
+							<p>
+								One way JavaScript is so different from HTML and CSS is that it can actually write HTML and CSS for you. Once you realize that, you might ask yourself: how much of my website can I code just using JavaScript? The answer is quite a lot, but it helps to have some data to pull from.
+							</p>
+							<p>
+								In this final unit, we’ll look at how we can use JavaScript and data to create complex websites without having to write much HTML or CSS by hand.
+							</p>
+							<p>
+								Even though this is the last unit, remember that there isn’t really a finish line to web programming. You can always run into a problem that requires learning a new skill. After this, you’ll at least have all the basics you need to solve those problems.
+							</p>
+						</div>
+					</div>
+
+					<div class="unit-content">
+						
+					</div>
+				</section>
+			</main>
+
+			<div id="trail"></div>
+			<script src="/script.js"></script>
+		</body>
+		</html>
 	
-		<section class="resources-unit" style="--primary: var(--blue);" data-color="blue" id="unit-3">
-			<div class="resources-unit-title">
-				<div class="resources-unit-title-number">Unit 3</div>
-				<h2><a href="#unit-3">Layout</a></h2>
-				<p>
-					By defaults, websites try really hard to stay vertical. As you add more content, it predictably goes at the bottom of your page. But that isn’t how designers work. Furthermore, there are tons of content that aren’t great when presented this way. Help!
-				</p>
-				<p>
-					Luckily, the Internet was made by people, and they worked together to solve this problem. Over time, they updated (and created) a few key CSS properties that made complex layouts easy (or at least, easier) to achieve. In this unit, we’ll learn how to make different kinds of web layouts with the power of CSS.
-				</p>
-			</div>
-
-			<div class="resources-unit-content">
-				<div class="unit-section" id="">
-					<h3><a href="#">Coming soon!</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								Coming soon!
-							</p>
-						</div>
-
-						<h4>Links</h4>
-						<div class="unit-links">
-							<a href="/" target="_blank">
-								<h5>Coming soon!</h5>
-								<p>Coming soon!</p>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	
-		<section class="resources-unit" style="--primary: var(--yellow);" data-color="yellow" id="unit-4">
-			<div class="resources-unit-title">
-				<div class="resources-unit-title-number">Unit 4</div>
-				<h2><a href="#unit-4">Interaction</a></h2>
-				<p>
-					Once you’re comfortable with HTML and CSS, you might find yourself asking a question: is this really all a website can do? Organize and present information?
-				</p>
-				<p>
-					Of course not! Websites are incredible not just because they give us information, but because they also make that information <em>interactive</em>. Unfortunately for us developers, that means we’re going to have to learn yet another language, namely JavaScript. Get ready for something a little different!
-				</p>
-			</div>
-
-			<div class="resources-unit-content">
-				<div class="unit-section" id="">
-					<h3><a href="#">Coming soon!</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								Coming soon!
-							</p>
-						</div>
-
-						<h4>Links</h4>
-						<div class="unit-links">
-							<a href="/" target="_blank">
-								<h5>Coming soon!</h5>
-								<p>Coming soon!</p>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	
-		<section class="resources-unit" style="--primary: var(--purple);" data-color="purple" id="unit-5">
-			<div class="resources-unit-title">
-				<div class="resources-unit-title-number">Unit 5</div>
-				<h2><a href="#unit-5">Loops</a></h2>
-				<p>
-					JavaScript is pretty darn powerful. Not only can we use it to make websites interactive, we can use JavaScript to make things happen on their own! To leverage this kind of power, we need to learn about a fundamental concept of computer science: loops.
-				</p>
-				<p>
-					In this section, we’ll use loops to automate repetitive tasks and make full use of the web medium.
-				</p>
-			</div>
-
-			<div class="resources-unit-content">
-				<div class="unit-section" id="">
-					<h3><a href="#">Coming soon!</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								Coming soon!
-							</p>
-						</div>
-
-						<h4>Links</h4>
-						<div class="unit-links">
-							<a href="/" target="_blank">
-								<h5>Coming soon!</h5>
-								<p>Coming soon!</p>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	
-		<section class="resources-unit" style="--primary: var(--red);" data-color="red" id="unit-6">
-			<div class="resources-unit-title">
-				<div class="resources-unit-title-number">Unit 6</div>
-				<h2><a href="#unit-6">Data</a></h2>
-				<p>
-					One way JavaScript is so different from HTML and CSS is that it can actually write HTML and CSS for you. Once you realize that, you might ask yourself: how much of my website can I code just using JavaScript? The answer is quite a lot, but it helps to have some data to pull from.
-				</p>
-				<p>
-					In this final unit, we’ll look at how we can use JavaScript and data to create complex websites without having to write much HTML or CSS by hand.
-				</p>
-				<p>
-					Even though this is the last unit, remember that there isn’t really a finish line to web programming. You can always run into a problem that requires learning a new skill. After this, you’ll at least have all the basics you need to solve those problems.
-				</p>
-			</div>
-
-			<div class="resources-unit-content">
-				<div class="unit-section" id="">
-					<h3><a href="#">Coming soon!</a></h3>
-					<div class="unit-section-content">
-						<div class="unit-info">
-							<p>
-								Coming soon!
-							</p>
-						</div>
-
-						<h4>Links</h4>
-						<div class="unit-links">
-							<a href="/" target="_blank">
-								<h5>Coming soon!</h5>
-								<p>Coming soon!</p>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
-
-	<div id="trail"></div>
-	<script src="/script.js"></script>
-	<script src="/cursor.js"></script>
-</body>
-</html>
