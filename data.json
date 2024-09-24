@@ -1967,6 +1967,14 @@
 					"display-name": "Demos",
 					"id": "demos",
 					"resources": [
+						{
+							"title": "A Basic Portfolio",
+							"desc": "",
+							"links": [
+								["GitHub Repository", "https://github.com/gabrieldrozdov/wpw-portfolio"],
+								["Live Demo", "https://gabrieldrozdov.github.io/wpw-portfolio/"]
+							]
+						}
 					]
 				}
 			]
