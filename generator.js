@@ -125,8 +125,15 @@ function generateHTML() {
 				<a href="#unit-6" class="nav-link-section" style="--primary: var(--red);" onclick="toggleNav();">UNIT 6: Data</a>
 				${navContent[5]}
 			</nav>
-			<button class="nav-toggle" onclick="toggleNav();">Menu</button>
-			<a href="https://gdwithgd.com/" target="_blank" class="nav-toggle nav-gd">GD with GD</a>
+			<div class="nav-toggles">
+				<a href="https://gdwithgd.com/" target="_blank" class="nav-toggle nav-gd">GD with GD</a>
+				<div class="nav-toggles-spacer"></div>
+				<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank" class="nav-toggle">Write some code</a>
+				<a href="https://babysteps.gdwithgd.com/" target="_blank" class="nav-toggle">Launch a website</a>
+				<a href="https://testproject1.gdwithgd.com/" target="_blank" class="nav-toggle">Start a project</a>
+				<div class="nav-toggles-spacer"></div>
+				<button class="nav-toggle nav-menu" onclick="toggleNav();">Menu</button>
+			</div>
 		
 			<header class="header">
 				<h1 class="header-title">

@@ -117,17 +117,26 @@ button {
 .nav[data-active="0"] {
 	transform: translateX(calc(100% + 10px));
 }
-.nav-toggle {
+.nav-toggles {
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow-x: scroll;
+	display: flex;
+	z-index: 9;
+	white-space: nowrap;
+}
+.nav-toggles-spacer {
+	flex-grow: 1;
+}
+.nav-toggle {
 	font-family: "Monaspace", monospace;
 	font-size: 18px;
-	padding: .8em 1.2em .6em 1.2em;
-	border-radius: 50%;
+	padding: .8em 2em .6em 2em;
+	border-radius: 40px 40px 0 0;
 	border: unset;
 	background-color: var(--black);
-	z-index: 9;
 	color: var(--white);
 	text-decoration: unset;
 	transition: box-shadow .2s, border-radius .2s;
@@ -136,10 +145,22 @@ button {
 	font-weight: 700;
 	box-shadow: inset -2.5px -2.5px 5px rgba(0,0,0,.5), inset 2.5px 2.5px 5px rgba(255,255,255,.5);
 }
+.nav-gd {
+	border-radius: 0 40px 0 0;
+}
+.nav-menu {
+	border-radius: 40px 0 0 0;
+}
 .nav-toggle:hover {
 	background-color: var(--white);
 	color: var(--black3);
-	border-radius: 10px;
+	border-radius: 10px 10px 0 0;
+}
+.nav-gd:hover {
+	border-radius: 0 10px 0 0;
+}
+.nav-menu:hover {
+	border-radius: 10px 0 0 0;
 }
 .nav-toggle:active {
 	box-shadow: inset 2.5px 2.5px 5px rgba(0,0,0,.5), inset -2.5px -2.5px 5px rgba(255,255,255,.5);
