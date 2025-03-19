@@ -4,19 +4,7 @@
 	src: url("/assets/fonts/DepartureMono-Regular.otf") format(opentype),
 		 url("/assets/fonts/DepartureMono-Regular.woff") format(woff),
 		 url("/assets/fonts/DepartureMono-Regular.woff2") format(woff2);
-}
-@font-face {
-	font-family: "Limkin";
-	src: url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.ttf") format(truetype),
-		 url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff") format(woff),
-		 url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff2") format(woff2);
-	font-weight: 100 900;
-}
-@font-face {
-	font-family: "Paint";
-	src: url("https://toomuchtype.com/fonts/paint/static/TMT-Paint-Regular.otf") format(opentype),
-		 url("https://toomuchtype.com/fonts/paint/static/TMT-Paint-Regular.woff") format(woff),
-		 url("https://toomuchtype.com/fonts/paint/static/TMT-Paint-Regular.woff2") format(woff2);
+	font-weight: 500;
 }
 @font-face {
 	font-family: "Limkin Pixel";
@@ -78,8 +66,7 @@ button {
 .nav {
 	display: flex;
 	flex-direction: column;
-	max-height: calc(100dvh - calc(var(--unit) * 4));
-	height: min-content;
+	height: calc(100dvh - calc(var(--unit) * 4));
 	position: sticky;
 	gap: var(--unit);
 	top: calc(var(--unit) * 2);
@@ -329,10 +316,9 @@ button {
 .header-title-big {
 	font-size: clamp(40px, 10vw, 200px);
 	line-height: 1em;
-	font-variation-settings: "wght" 800, "SRFF" 0;
-	font-weight: 800;
+	font-variation-settings: "wght" 500, "SRFF" 0;
+	font-weight: 500;
 	color: var(--black3);
-	paint-order: stroke fill;
 }
 .header-title-big span {
 	display: inline-block;
@@ -341,6 +327,11 @@ button {
 	display: inline-block;
 	animation: header-title-big 7s infinite ease-in-out ;
 }
+@supports (-webkit-backdrop-filter: blur(0)) {
+	.header-title-big span span {
+		/* animation: unset; */
+	}
+}  
 @keyframes header-title-big {
 	0% {
 		color: var(--pink);
