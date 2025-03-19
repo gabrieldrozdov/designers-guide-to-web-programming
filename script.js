@@ -1,73 +1,57 @@
-// Animate header title
-function initializeHeaderTitle() {
-	const headerTitleBigSpans = document.querySelectorAll('.header-title-big span');
-	let temp = '';
-	let index = 0;
-	for (let span of headerTitleBigSpans) {
-		for (let letter of span.innerText) {
-			if (letter == " ") {
-				letter = "&nbsp;";
-			}
-			temp += `<span style="animation-delay: -${index*50}ms">${letter}</span>`;
-			index++;
-		}
-		span.innerHTML = temp;
-		temp = "";
+// Header animation
+const headerTitleBig = document.querySelector('.header-title-big');
+for (let span of headerTitleBig.querySelectorAll('span')) {
+	let temp = "";
+	for (let letter of span.innerText) {
+		temp += `<span style="animation-delay: ${-Math.random()*10}s;">${letter}</span>`;
 	}
+	span.innerHTML = temp;
 }
-initializeHeaderTitle();
 
-// Nav
-let navOpen = false;
+// Unit heading title name animation
+for (let heading of document.querySelectorAll('.unit-heading-title-name')) {
+	let temp = "";
+	for (let letter of heading.innerText) {
+		temp += `<span style="animation-delay: ${-Math.random()*10}s;">${letter}</span>`;
+	}
+	heading.innerHTML = temp;
+}
+
+// Transition in/out observer
+const transitionObserver = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		let elmnt = entry.target;
+		if (entry.isIntersecting) {
+			elmnt.dataset.active = 1;
+		} else {
+			elmnt.dataset.active = 0;
+		}
+	});
+});
+for (let elmnt of document.querySelectorAll('.observed')) {
+	elmnt.dataset.active = 0;
+	transitionObserver.observe(elmnt);
+}
+
+// Nav border
+let conicGradientDegrees = 0;
+function animateConicGradientDegrees() {
+	const root = document.querySelector('html');
+	conicGradientDegrees -= 1;
+	if (conicGradientDegrees <= -360) {
+		conicGradientDegrees = 0;
+	}
+	root.style.setProperty('--conic-gradient-degrees', conicGradientDegrees + "deg");
+	requestAnimationFrame(animateConicGradientDegrees);
+}
+animateConicGradientDegrees();
+
+// Open/close nav
 function toggleNav() {
 	const nav = document.querySelector('.nav');
-	if (!navOpen) {
-		navOpen = true;
+	if (parseInt(nav.dataset.active) == 0) {
 		nav.dataset.active = 1;
 	} else {
-		navOpen = false;
 		nav.dataset.active = 0;
 	}
 }
-
-// Favicon
-for (let section of document.querySelectorAll('.unit')) {
-	const favicon = document.querySelector('[rel="icon"]');
-	section.addEventListener('mouseenter', () => {
-		favicon.href=`/assets/meta/favicon-${section.dataset.color}.png`;
-	})
-}
-
-// Cursor
-document.querySelector('body').addEventListener('mousemove', (e) => {
-	const cursor = document.querySelector('.cursor');
-	cursor.style.left = e.clientX + "px";
-	cursor.style.top = e.clientY + "px";
-	cursor.style.opacity = 1;
-})
-for (let link of document.querySelectorAll('a')) {
-	const cursor = document.querySelector('.cursor');
-	link.addEventListener('mouseenter', (e) => {
-		cursor.dataset.hover = 1;
-	})
-	link.addEventListener('mouseleave', (e) => {
-		cursor.dataset.hover = 0;
-	})
-}
-for (let link of document.querySelectorAll('button')) {
-	const cursor = document.querySelector('.cursor');
-	link.addEventListener('mouseenter', (e) => {
-		cursor.dataset.hover = 1;
-	})
-	link.addEventListener('mouseleave', (e) => {
-		cursor.dataset.hover = 0;
-	})
-}
-document.querySelector('body').addEventListener('mousedown', (e) => {
-	const cursor = document.querySelector('.cursor');
-	cursor.dataset.press = 1;
-})
-document.querySelector('body').addEventListener('mouseup', (e) => {
-	const cursor = document.querySelector('.cursor');
-	cursor.dataset.press = 0;
-})
