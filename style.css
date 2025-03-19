@@ -377,7 +377,8 @@ button {
 	line-height: 1.4em;
 	font-variation-settings: "wght" 250;
 	font-weight: 250;
-	text-decoration: dotted underline;
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
 	text-decoration-thickness: 1px;
 	text-underline-offset: .4em;
 }
@@ -394,6 +395,8 @@ button {
 @media only screen and (max-width: 600px) {
 	.header-title-link {
 		font-size: 1.4rem;
+		font-variation-settings: "wght" 500;
+		font-weight: 500;
 	}
 }
 
@@ -433,6 +436,8 @@ button {
 @media only screen and (max-width: 600px) {
 	.header-desc {
 		font-size: 1.4rem;
+		font-weight: 500;
+		font-variation-settings: "wght" 500;
 	}
 }
 
@@ -536,6 +541,10 @@ button {
 	.unit-heading-title-name {
 		font-size: 3rem;
 	}
+	.unit-heading-desc {
+		font-weight: 500;
+		font-variation-settings: "wght" 500;
+	}
 }
 
 /* Unit content */
@@ -587,17 +596,10 @@ button {
 	color: var(--off-white);
 	padding: calc(var(--unit) * 4) 0 calc(var(--unit) * 4) calc(var(--unit) * 8);
 	position: relative;
+	border-left: 2px dotted var(--primary);
 }
 .unit-section:nth-child(1) .unit-section-info {
 	padding-top: calc(var(--unit) * 6);
-}
-.unit-section-info::before {
-	position: absolute;
-	content: "";
-	left: 0;
-	top: 0;
-	height: 100%;
-	border-left: 2px dotted var(--primary);
 }
 .unit-section-info-content {
 	display: flex;
@@ -726,6 +728,14 @@ button {
 	.unit-section-info-content h3 {
 		font-size: 2.5rem;
 	}
+	.unit-section-info-content h3 span {
+		font-weight: 500;
+		font-variation-settings: "wght" 500;
+	}
+	.unit-section-info-content p {
+		font-weight: 500;
+		font-variation-settings: "wght" 500;
+	}
 }
 
 /* Subsections */
@@ -743,13 +753,6 @@ button {
 .unit-subsection-heading {
 	padding: 0 0 0 calc(var(--unit) * 6);
 	position: relative;
-}
-.unit-subsection-heading::before {
-	position: absolute;
-	left: 0;
-	top: 0;
-	content: "";
-	height: 100%;
 	border-left: 2px dotted var(--primary);
 }
 .unit-subsection-title {
@@ -830,6 +833,10 @@ button {
 	.unit-subsection-title {
 		font-size: 2rem;
 	}
+	.unit-subsection-title a {
+		font-weight: 500;
+		font-variation-settings: "wght" 500;
+	}
 }
 
 /* Resources */
@@ -840,13 +847,6 @@ button {
 	margin-left: calc(var(--unit) * 2);
 	padding: calc(var(--unit) * 2) 0 calc(var(--unit) * 2) calc(var(--unit) * 4);
 	position: relative;
-}
-.unit-subsection-resources::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	content: "";
 	border-left: 2px dotted var(--primary);
 }
 .unit-subsection-resource {
