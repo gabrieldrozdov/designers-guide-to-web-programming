@@ -105,13 +105,13 @@ button {
 	text-decoration: none;
 	color: var(--light-gray);
 	border: 2px dotted var(--light-gray);
-	width: 40px;
 	display: none;
 	align-items: center;
 	justify-content: center;
+	font-size: max(.8rem, 14px);
+	line-height: 1em;
 	text-align: center;
-	padding-top: .2em;
-	height: 40px;
+	padding: calc(5px + .2em) 10px 5px 10px;
 	background-color: var(--almost-black);
 	position: absolute;
 	top: calc(var(--unit) + 1px);
@@ -230,7 +230,7 @@ button {
 		transform: translateX(0);
 	}
 	.nav-content {
-		padding-top: calc(calc(var(--unit) * 2) + 40px);
+		padding-top: calc(calc(var(--unit) * 2) + 31px);
 	}
 	.nav-close {
 		display: flex;
