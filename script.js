@@ -8,8 +8,8 @@ for (let span of headerTitleBig.querySelectorAll('span')) {
 	span.innerHTML = temp;
 }
 
-// Unit heading title name animation
-for (let heading of document.querySelectorAll('.unit-heading-title-name')) {
+// Chapter heading title name animation
+for (let heading of document.querySelectorAll('.chapter-heading-title-name')) {
 	let temp = "";
 	for (let letter of heading.innerText) {
 		temp += `<span style="animation-delay: ${-Math.random()*10}s;">${letter}</span>`;
@@ -24,7 +24,7 @@ const transitionObserver = new IntersectionObserver((entries) => {
 		if (entry.isIntersecting) {
 			elmnt.dataset.active = 1;
 		} else {
-			elmnt.dataset.active = 0;
+			// elmnt.dataset.active = 0;
 		}
 	});
 });
@@ -32,19 +32,6 @@ for (let elmnt of document.querySelectorAll('.observed')) {
 	elmnt.dataset.active = 0;
 	transitionObserver.observe(elmnt);
 }
-
-// Nav border
-let conicGradientDegrees = 0;
-function animateConicGradientDegrees() {
-	const root = document.querySelector('html');
-	conicGradientDegrees -= 1;
-	if (conicGradientDegrees <= -360) {
-		conicGradientDegrees = 0;
-	}
-	root.style.setProperty('--conic-gradient-degrees', conicGradientDegrees + "deg");
-	requestAnimationFrame(animateConicGradientDegrees);
-}
-animateConicGradientDegrees();
 
 // Open/close nav
 function toggleNav() {
